@@ -1,0 +1,762 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 共用 */
+* {
+    box-sizing: border-box;
+}
+
+/* 導覽列 */
+header {
+    position: fixed;
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
+
+.logo {
+    display: block;
+    height: 60px;
+}
+
+.logo img {
+    /* 圖片置中 */
+    margin: 6px 20px;
+}
+
+.tittle {
+    display: block;
+    line-height: 60px;
+    text-decoration: none;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    color: #000000;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu {
+    display: flex;
+    gap: 36px;
+}
+
+.menu_option {
+    display: block;
+    text-decoration: none;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 60px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.icon {
+    margin-left: 96px;
+    margin-right: 36px;
+    display: flex;
+    gap: 28px;
+}
+
+.icon_option {
+    display: block;
+    height: 60px;
+}
+
+.icon img {
+    margin: 14px auto;
+}
+
+/* 內文 */
+.index {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/bg.png);
+    background-size: cover;
+}
+
+.text {
+    position: absolute;
+    left: 103px;
+    top: 26%;
+}
+
+.index h1 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.index h2 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    top: 43%;
+    display: flex;
+}
+
+.hori_line {
+    width: 366px;
+    height: 24px;
+    border-bottom: solid #FFFFFF;
+}
+
+.line h1 {
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin: 0 0 0 26px;
+}
+
+.index_bg1 {
+    position: absolute;
+    top: 60px;
+    right: 7%;
+    width: 42%;
+    height: 66vh;
+    text-align: end;
+}
+
+.index_bg1 img {
+    height: 100%;
+    width: auto;
+}
+
+.index_bg2 {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 18%;
+    height: 49vh;
+}
+
+.index_bg2 img {
+    height: 100%;
+    width: auto;
+}
+
+.index_bg3 {
+    position: absolute;
+    bottom: 0;
+    left: 26%;
+    width: 18%;
+    height: 37vh;
+}
+
+.index_bg3 img {
+    height: 100%;
+    width: auto;
+}
+
+.shopping {
+    position: absolute;
+    right: 7%;
+    bottom: 7%;
+    display: block;
+}
+
+/* 熱門口味 */
+.popular {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    background: url(/img/Mask.png);
+    background-size: cover;
+}
+
+.tittle_pp {
+    width: 280px;
+    height: 52px;
+    margin: 80px auto;
+    border-bottom: 1px solid #613134;
+}
+
+.tittle_pp h1 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    text-align: center;
+}
+
+.flavor {
+    width: 1195px;
+    height: 403px;
+    display: flex;
+    justify-content: space-between;
+    margin: 6px auto 82px auto;
+}
+
+.flavor a {
+    display: block;
+}
+
+.fla_tittle {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    text-decoration: none;
+    margin-top: 18px;
+    text-align: center;
+}
+
+/* 最新消息 */
+.news {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background-color: #FFFFFF;
+}
+
+.bg_grey {
+    width: 32%;
+    height: 100%;
+    background: #9D9D9D;
+    border-radius: 0px 10px 0px 0px;
+}
+
+.bg_grey h1 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    padding-top: 52px;
+    padding-left: 67px;
+}
+
+.hori_line_news {
+    width: 75%;
+    height: 1px;
+    border-bottom: solid #FFFFFF;
+    margin-top: 37px;
+}
+
+.news_content {
+    position: absolute;
+    top: 192px;
+    width: 100%;
+    height: 450px;
+}
+
+.upper {
+    display: flex;
+    gap: 66px;
+    justify-content: end;
+}
+
+.news_text {
+    width: 54%;
+    position: relative;
+}
+
+.news_text h1 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    height: 54px;
+    border-bottom: 1px solid #C39681;
+}
+
+.news_text p {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #613134;
+    width: 630px;
+    height: auto;
+    margin-top: 37.5px;
+}
+
+.more {
+    width: 630px;
+    position: absolute;
+    bottom: 0;
+}
+
+.more a {
+    display: block;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    text-decoration: none;
+    text-align: end;
+}
+
+.lower {
+    margin-top: 25px;
+    margin-left: 71px;
+}
+
+.lower a {
+    margin-right: 23px;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* 所有類別 */
+.all_type {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.bg_dark {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 64%;
+    height: 35%;
+    background: #613134;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.bg_light {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 80%;
+    height: 26%;
+    background: #C39681;
+    border-radius: 10px;
+}
+
+.bg_light h1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    height: 28px;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 28px;
+    letter-spacing: 1.06em;
+    color: #FFFFFF;
+}
+
+.at_content {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 785px;
+}
+
+.at_content h1 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-align: center;
+    height: 52px;
+    width: 280px;
+    margin: 0 auto;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.type {
+    margin-top: 73px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 70vh;
+}
+
+#type_item {
+    display: block;
+    width: 300px;
+    height: 60vh;
+    text-align: center;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 60vh;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.one {
+    background: url(/img/all_type1.png) center no-repeat;
+}
+
+.two {
+    background: url(/img/all_type2.png) center no-repeat
+}
+
+.three {
+    background: url(/img/all_type3.png) center no-repeat;
+}
+
+.four {
+    background: url(/img/all_type4.png) center no-repeat;
+}
+
+.one,
+.three {
+    align-self: flex-start;
+}
+
+.two,
+.four {
+    align-self: flex-end;
+}
+
+/* 品牌故事 */
+.brand_story {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.bg_grey_two {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 94%;
+    height: 78%;
+    background: #9D9D9D;
+    border-radius: 300px 0px 0px 0px;
+}
+
+.bg_grey_two h1 {
+    position: absolute;
+    bottom: 75px;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 28px;
+    letter-spacing: 1.06em;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+.hori_line_bs {
+    position: absolute;
+    bottom: 58px;
+    height: 1px;
+    width: 83%;
+    border-top: 1px solid #FFFFFF;;
+}
+
+.bs_content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 66px;
+}
+.bs_img {
+    width: 56%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bs_img img {
+    width: auto;
+    height: auto;
+}
+.bs_text {
+    width: 507px;
+    height: 355px;
+}
+
+.bs_text h1 {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    width: 280px;
+    height: 52px;
+    border-bottom: 1px solid #FFFFFF;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bs_text p {
+    margin-top: 65px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+/* 頁尾 */
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0px;
+    width: 100%;
+    height: 150px;
+    background: #E6DEDD;
+}
+
+.tittle_footer {
+    display: block;
+    line-height: 150px;
+    text-decoration: none;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 0.2em;
+    color: #000000;
+    margin-left: 16px;
+}
+
+#menu_footer {
+    width: 592px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#menu_footer li {
+    margin-right: 48px;
+}
+
+.menu_option_f {
+    display: block;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #613134;
+    text-decoration: none;
+}
+
+#info {
+    /* position: absolute;
+    right: 16px; */
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #C39681;
+    height: 96px;
+    margin: 27px 16px 27px 0;
+}
+
+#copyright {
+    position: absolute;
+    right: 16px;
+    bottom: 4px;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    color: #9D9D9D;
+}
