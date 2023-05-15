@@ -137,7 +137,11 @@ table {
 /* 共用 */
 * {
     box-sizing: border-box;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
 }
+
 /* 導覽列 */
 header {
     position: fixed;
@@ -148,14 +152,17 @@ header {
     background: rgba(255, 255, 255, 1);
     z-index: 1;
 }
+
 .logo {
     display: block;
     height: 60px;
 }
+
 .logo img {
     /* 圖片置中 */
     margin: 6px 20px;
 }
+
 .tittle {
     display: block;
     line-height: 60px;
@@ -178,6 +185,7 @@ nav {
     height: 60px;
     width: 410px;
 }
+
 #menu {
     display: flex;
     gap: 36px;
@@ -195,6 +203,7 @@ nav {
     line-height: 60px;
     letter-spacing: 0.1em;
     color: #000000;
+    height: 60px;
 }
 
 .icon {
@@ -212,11 +221,43 @@ nav {
 .icon img {
     margin: 14px auto;
 }
-/* 內容 */
-main {
+
+/* banner */
+#banner {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 280px;
 }
+
+#banner img {
+    position: absolute;
+    bottom: 0;
+}
+
+/* 內容 */
+#content {
+    position: relative;
+    width: 100%;
+    height: 140vh;
+    background: url(/images/confirm/bg_confirm.png);
+}
+.tittle_confirm {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+#content h1 {
+    width: 280px;
+    height: 52px;
+    border-bottom: 1px solid #613134;
+    margin: 0 auto 111px auto;
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
 /* 頁尾 */
 footer {
     position: relative;
@@ -241,10 +282,12 @@ footer {
     color: #000000;
     margin-left: 16px;
 }
+
 footer .menu_f {
     width: 600px;
     height: 150px;
 }
+
 #menu_footer {
     width: 600px;
     height: 96px;
