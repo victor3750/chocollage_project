@@ -1,0 +1,86 @@
+
+main {
+    /* margin-top: 60px; */
+
+    display: flex; 
+    flex-direction: column; /*垂直排*/
+    align-items: center; /*副軸(水平)置中*/
+
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  /* banner 區 */
+
+  #banner #product {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #banner{
+    background-image: url(../images/chocolate_desciption/chocolate_desciption_banner2.png);
+    background-size: cover;
+    background-position: center;
+
+    /*object-fit: cover; 會覆蓋且自動置中*/
+    width: 100%;
+    height: 450px;
+  }
+
+  /* 中間的篩選器區 */
+
+  .check_list{
+    text-align: center;
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-around; /*子元素貼齊頭尾，中間分散*/
+  }
+  
+
+  /* 商品介紹區 */
+  /* 排版 */
+  .list_box{
+    display: flex;
+    justify-content: center; /* 水平置中 */
+
+    height: 100vh; /*暫時撐開*/
+  }
+
+  .list_item{
+    width: 35vw;
+    margin: 0 40px 40px;
+    position: relative;
+  }
+
+
+/* 左側 */
+
+
+  /* 圖片 */
+  figure{
+    width: 20vw;
+    height: 20vw;
+    
+    /* flex-shrink: 0; 暫時固定Size */
+
+}
+
+figure img{
+    object-fit: cover; /*會覆蓋且自動置中*/
+    height: 300px;
+    width: 300px;
+    border-radius: 10px 10px 0 0;/*圓角*/
+    overflow:hidden; /*溢出時，內容自動隱藏，這樣圓角才會出來*/
+}
+
+/* 右側 */
+.list_right{
+    /* height: 300px; */
+    background: linear-gradient(125.78deg, #C39681 23.06%, rgba(227, 227, 227, 0.6) 58.7%, #C39681 99.24%);
+    position: absolute;
+    top: 45px;
+    left: 60px;
+    padding: 20px 50px 40px 17vw; /*上右下左*/
+    z-index: -1;
+}
