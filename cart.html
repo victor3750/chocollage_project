@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>訂單確認</title>
+    <title>購物車</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/confirm.css">
+    <link rel="stylesheet" href="/CSS/cart.css">
 </head>
 
 <body>
@@ -50,52 +50,55 @@
         </section>
         <section id="content">
             <div class="tittle_confirm">
-                <h1>組合確認</h1>
+                <h1>購物車</h1>
             </div>
             <div class="list_confirm">
                 <table id="item_list">
                     <thead id="item_thead">
                         <tr>
+                            <th>刪除</th>
+                            <th>數量</th>
                             <th>品項名稱</th>
                             <th>口味</th>
                             <th>顆數</th>
+                            <th>金額</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td></td>
+                            <td></td>
                             <td>經典緞帶-六入禮盒</td>
                             <td>黑巧克力</td>
                             <td>2顆</td>
+                            <td>$120</td>
                         </tr>
                         <tr>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td>玫瑰巧克力</td>
                             <td>2顆</td>
+                            <td>$120</td>
                         </tr>
                         <tr>
                             <td></td>
+                            <td></td>
+                            <td></td>
                             <td>藍莓巧克力</td>
                             <td>2顆</td>
+                            <td>$120</td>
                         </tr>
                     </tbody>
                 </table>
-                <table>
-                    <thead id="item_thead">
-                        <tr>
-                            <th>暖心小卡</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                </table>
                 <form name="message_form" id="message_form" action="" method="post">
                     <textarea name="message" maxlength="150" id="message"
-                        placeholder="最多可填寫150字、行數八行(包含標點符號)，可以略過此步驟"></textarea>
+                        placeholder="祝你生日快樂！希望你的生日充滿歡樂和美好的回憶。" readonly></textarea>
                 </form>
             </div>
             <div class="step_button">
-                <a href="" id="back">回上一步</a>
-                <a href="" id="toCart">加入購物車</a>
+                <a href="" id="shopping">繼續選購</a>
+                <a href="" id="checkout">去結帳</a>
             </div>
         </section>
     </main>

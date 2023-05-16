@@ -152,10 +152,6 @@ table {
     /* 設置水平方向為 0，垂直方向為 10px */
 }
 
-th {
-    background: #C39681;
-}
-
 th:nth-child(1) {
     border-radius: 10px 0px 0px 10px;
 }
@@ -166,6 +162,10 @@ th:nth-last-child(1) {
 
 th,
 td {
+    padding-left: 32px;
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
     text-align: left;
 }
 
@@ -174,18 +174,11 @@ tr {
 }
 
 th {
-    padding-left: 32px;
-    font-size: 20px;
-    line-height: 50px;
-    letter-spacing: 0.2em;
+    background: #C39681;
     color: #FFFFFF;
 }
 
 td {
-    padding-left: 32px;
-    font-size: 20px;
-    line-height: 50px;
-    letter-spacing: 0.2em;
     color: #613134;
 }
 
@@ -339,11 +332,6 @@ textarea {
     color: #613134;
 }
 
-textarea:focus {
-    outline: 1.5px solid #C39681;
-    /* 將輸入時outline顏色改色 */
-}
-
 /* 按鈕 */
 .step_button {
     width: 1050px;
@@ -352,8 +340,8 @@ textarea:focus {
     justify-content: space-between;
 }
 
-#back,
-#toCart {
+#shopping,
+#checkout {
     display: block;
     font-size: 20px;
     line-height: 32px;
