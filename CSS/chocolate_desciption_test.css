@@ -1,86 +1,221 @@
-
 main {
-    /* margin-top: 60px; */
+  /* margin-top: 60px; */
 
-    display: flex; 
-    flex-direction: column; /*垂直排*/
-    align-items: center; /*副軸(水平)置中*/
+  display: flex;
+  flex-direction: column;
+  /*垂直排*/
+  align-items: center;
+  /*副軸(水平)置中*/
 
-    font-family: 'Noto Sans TC', sans-serif;
-  }
+  font-family: 'Noto Sans TC', sans-serif;
+}
 
-  /* banner 區 */
+/* banner 區 */
 
-  #banner #product {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#banner #product {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  #banner{
-    background-image: url(../images/chocolate_desciption/chocolate_desciption_banner2.png);
-    background-size: cover;
-    background-position: center;
+#banner {
+  background-image: url(../images/chocolate_desciption/chocolate_desciption_banner2.png);
+  background-size: cover;
+  background-position: center;
 
-    /*object-fit: cover; 會覆蓋且自動置中*/
-    width: 100%;
-    height: 450px;
-  }
+  /*object-fit: cover; 會覆蓋且自動置中*/
+  width: 100%;
+  height: 450px;
+  position: relative;
+  z-index: -1;
+}
 
-  /* 中間的篩選器區 */
+.banner_text {
+  position: absolute;
+  right: 105px;
+  top: 130px;
+  width: 590px;
+  color: #613134;
+}
 
-  .check_list{
-    text-align: center;
-    margin: 100px 0;
-    display: flex;
-    justify-content: space-around; /*子元素貼齊頭尾，中間分散*/
-  }
+.banner_text h2 {
+  height: 70px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2em;
+  position: relative;
+}
+
+.banner_text h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #613134;
+
+  position: absolute;
+  bottom: 0px;
+}
+
+.banner_text p {
+  font-size: 16px;
+  line-height: 47px;
+  letter-spacing: 0.1em;
+}
+
+/* 中間的篩選器區 */
+
+.check_list {
+  text-align: center;
+  margin: 100px 70px;
+  display: flex;
+  justify-content: space-around;
+  /*子元素平均分配寬度*/
   
+}
 
-  /* 商品介紹區 */
-  /* 排版 */
-  .list_box{
-    display: flex;
-    justify-content: center; /* 水平置中 */
+.check_option {
+  display: block;
+  width: 15vw;
 
-    height: 100vh; /*暫時撐開*/
-  }
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.2em;
 
-  .list_item{
-    width: 35vw;
-    margin: 0 40px 40px;
-    position: relative;
-  }
+  color: #C39681;
+  text-decoration: none;
+
+  height: 54px;
+  position: relative;
+  z-index: -1;
+}
+
+.check_option::after {
+  content: "";
+  /*必寫，content 就算沒內容也一定要寫*/
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #C39681;
+
+  position: absolute;
+  bottom: 0px;
+}
+
+
+/* 商品介紹區 */
+/* 排版 */
+.list_box {
+  display: flex;
+  justify-content: center;
+  /* 水平置中 */
+
+  width: 100vw;
+  /* height: 100vh; */
+  /*暫時撐開*/
+
+  flex-wrap: wrap
+}
+
+.list_item {
+  width: 42vw;
+  margin: 0 30px 40px;
+  position: relative;
+  z-index: -1;
+}
 
 
 /* 左側 */
 
 
-  /* 圖片 */
-  figure{
-    width: 20vw;
-    height: 20vw;
-    
-    /* flex-shrink: 0; 暫時固定Size */
+/* 圖片 */
+figure {
+  width: 20vw;
+  height: 20vw;
+
+  height: 300px;
+  width: 300px;
+
+  /* flex-shrink: 0; 暫時固定Size */
 
 }
 
-figure img{
-    object-fit: cover; /*會覆蓋且自動置中*/
-    height: 300px;
-    width: 300px;
-    border-radius: 10px 10px 0 0;/*圓角*/
-    overflow:hidden; /*溢出時，內容自動隱藏，這樣圓角才會出來*/
+figure img {
+  object-fit: cover;
+  /*會覆蓋且自動置中*/
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  /*圓角*/
+  overflow: hidden;
+  /*溢出時，內容自動隱藏，這樣圓角才會出來*/
+}
+
+.price {
+  height: 45px;
+  width: 120px;
+
+  color: #613134;
+  font-family: 'GFS Didot', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.2em;
 }
 
 /* 右側 */
-.list_right{
-    /* height: 300px; */
-    background: linear-gradient(125.78deg, #C39681 23.06%, rgba(227, 227, 227, 0.6) 58.7%, #C39681 99.24%);
-    position: absolute;
-    top: 45px;
-    left: 60px;
-    padding: 20px 50px 40px 17vw; /*上右下左*/
-    z-index: -1;
+.list_right {
+
+  height: 300px;
+  color: #613134;
+  background: linear-gradient(125.78deg, #C39681 23.06%, rgba(227, 227, 227, 0.6) 58.7%, #C39681 99.24%);
+
+  position: absolute;
+  top: 45px;
+  left: 120px;
+  padding: 20px 50px 40px 200px;
+  border-radius: 10px;
+  /*上右下左*/
+  z-index: -2;
+}
+.bg-silver{
+  color: #ffffff;
+  background: linear-gradient(123.07deg, #848282 24.29%, rgba(132, 130, 130, 0.7) 59.37%, #848282 100%);
+}
+
+.list_right h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.2em;
+
+  position: relative;
+  height: 41px;
+
+  margin-bottom: 27px;
+}
+
+.list_right h2::after {
+  content: "";
+  /*必寫，content 就算沒內容也一定要寫*/
+  display: block;
+  width: 110%;
+  height: 1px;
+  background-color: #FFFFFF;
+
+  position: absolute;
+  left: -25px;
+  bottom: 0px;
+}
+
+
+.list_right p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
 }
