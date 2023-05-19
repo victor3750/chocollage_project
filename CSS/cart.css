@@ -91,13 +91,33 @@ td {
 }
 
 th:nth-child(1),
-th:nth-child(2) {
+td:nth-child(1) {
     text-align: center;
+    width: 300px;
 }
 
-td:nth-child(1),
+/* th:nth-child(2),
 td:nth-child(2) {
-    text-align: center;
+    padding-left: 10px;
+} */
+
+td:last-child {
+    text-align: end;
+}
+
+/* 展開按鈕 */
+.expand {
+    cursor: pointer;
+}
+
+.contents-row {
+    display: none;
+}
+
+.contents {
+    padding: 10px;
+    background: #E6DEDD;
+    border-radius: 10px;
 }
 
 /* 垃圾桶、加減符號垂直置中 */
@@ -160,6 +180,20 @@ textarea {
     background-color: #613134;
     height: 1px;
     border: none;
+}
+
+/* 商品總額 */
+.total {
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.total h2 {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
 }
 
 /* 按鈕 */
