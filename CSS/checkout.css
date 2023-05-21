@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* banner */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+#banner img {
+    position: absolute;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    bottom: 0;
+}
+
+/* 內容 */
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 120vh;
+    background: url(/images/confirm/bg_confirm.png);
+    background-size: cover;
+}
+
+/* 標題 */
+.tittle_confirm {
+    padding-top: 100px;
+    width: 100%;
+}
+
+#content h1 {
+    width: 280px;
+    height: 52px;
+    border-bottom: 1px solid #613134;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
+/* 填寫資訊區 */
+.con_info {
+    width: 1050px;
+    min-height: 1000px;
+    margin: 0 auto;
+}
+
+h3 {
+    padding: 0 12px;
+    color: #573E28;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h2 {
+    padding: 0 12px;
+    height: 50px;
+    background: #C39681;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin: 25px 0;
+}
+
+/* 修改radio樣式 */
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio [type="radio"]:checked+label,
+.radio [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    color: #613134;
+}
+
+.radio [type="radio"]:checked+label:before,
+.radio [type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #613134;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.radio [type="radio"]:checked+label:after,
+.radio [type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #C39681;
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.radio [type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.radio [type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* 讓label與input和select置中對齊 */
+.con_info div {
+    display: flex;
+}
+
+label {
+    display: inline-block;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    margin: 10px;
+}
+
+select,
+input {
+    border: 1px solid #613134;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+    color: #613134;
+    margin: 10px;
+    padding: 0 16px;
+}
+
+small {
+    font-size: 0.9rem;
+}
+
+/* 讓收件人資訊區所有input開頭對齊 */
+form label, #credit_card_input label {
+    width: 130px;
+}
+
+::placeholder {
+    color: #C39681;
+}
+
+#zipcode_box {
+    width: 6.5rem;
+}
+
+#email {
+    width: 30rem;
+}
+
+.address_section {
+    flex-direction: column;
+}
+
+#address {
+    display: block;
+    width: 30rem;
+}
+
+#name,
+#phone,
+#invoice,
+#carrier {
+    width: 12rem;
+}
+/* 信用卡號區 */
+#credit_card_number {
+    width: 75px;
+    margin-right: 0;
+}
+
+/* 載具條碼 */
+#carrier_number {
+    display: none;
+}
+/* 修改自動輸入預設背景顏色(目前直接將autofill關閉，所以先註解用不到) */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-text-fill-color: #613134;
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0) inset;
+    transition: background-color 5000s ease-in-out 0s;
+} */
+
+/* 按鈕 */
+.step_button {
+    width: 1050px;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+}
+
+#nextStep {
+    display: block;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #613134;
+    border-radius: 10px;
+    padding: 6px 36px;
+}

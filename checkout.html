@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳-付款及收件資訊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/common.css">
+    <link rel="stylesheet" href="/CSS/checkout.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="index(ch).html">
+            <img src="/images/index/Black and White Collection 10.svg" alt="logo">
+        </a>
+        <a class="tittle" href="index(ch).html">
+            CHOCOLLAGE
+        </a>
+        <nav>
+            <div class="menu_n">
+                <ul id="menu">
+                    <li><a class="menu_option" href="news.html">最新消息</a></li>
+                    <li><a class="menu_option" href="#">客製禮盒</a></li>
+                    <li><a class="menu_option" href="#">巧克力介紹</a></li>
+                    <li><a class="menu_option" href="#">關於我們</a></li>
+                </ul>
+            </div>
+            <ul class="icon">
+                <li>
+                    <a class="icon_option" href="cart.html">
+                        <img src="/images/index/購物車.svg" alt="購物車">
+                    </a>
+                </li>
+                <li>
+                    <a class="icon_option" href="#">
+                        <img src="/images/index/會員.svg" alt="會員">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <img src="/images/confirm/banner.png" alt="banner">
+        </section>
+        <section id="content">
+            <div class="tittle_confirm">
+                <h1>付款及收件資訊</h1>
+            </div>
+            <div class="con_info">
+                <h3>(此頁表單欄位僅為示意，無蒐集資料功能)</h3>
+                <h2 class="first_h2">選擇付款方式</h2>
+                <div class="radio">
+                    <input type="radio" name="payment_method" id="cash_on_dely" value="cash" onchange="showCreditCardInput()">
+                    <label for="cash_on_dely">貨到付款</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="payment_method" id="online_pay" value="online" onchange="showCreditCardInput()">
+                    <label for="online_pay">線上支付</label>
+                </div>
+                <div id="credit_card_input" style="display:none;">
+                    <label for="credit_card_number">信用卡號碼</label>
+                    <input type="text" id="credit_card_number" class="card" name="credit_card_number" maxlength="4">
+                    <input type="text" id="credit_card_number" class="card" name="credit_card_number" maxlength="4">
+                    <input type="text" id="credit_card_number" class="card" name="credit_card_number" maxlength="4">
+                    <input type="text" id="credit_card_number" class="card" name="credit_card_number" maxlength="4">
+                </div>
+                <h2>選擇取貨方式</h2>
+                <div class="radio">
+                    <input type="radio" name="pickup_method" id="self_pick">
+                    <label for="self_pick">店鋪自取</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="pickup_method" id="home_dely">
+                    <label for="home_dely">宅配到府<small>(運費80元)</small></label>
+                </div>
+                <h2>填寫收件人資訊</h2>
+                <form  autocomplete="off">
+                    <div>
+                        <label for="name">收件人姓名</label>
+                        <input type="text" id="name" name="name" placeholder="請輸入姓名">
+                    </div>
+                    <div>
+                        <label for="phone">聯絡電話</label>
+                        <input type="text" id="phone" name="phone" placeholder="02-1234-1234">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"><br>
+                    </div>
+                    <div>
+                        <label for="shipping_address">收件地址</label>
+                        <div class="address_section">
+                            <div>
+                                <select name="county" id="county_box">
+                                    <option value="">選擇縣市</option>
+                                </select>
+                                <select name="district" id="district_box">
+                                    <option value="">選擇鄉鎮市區</option>
+                                </select>
+                                <input type="text" id="zipcode_box" placeholder="郵遞區號">
+                            </div>
+                            <input type="text" id="address" name="address">
+                        </div>
+                    </div>
+                </form>
+                <h2>選擇發票開立方式</h2>
+                <form  autocomplete="off">
+                    <div>
+                        <label for="invoice">發票種類</label>
+                        <select name="district" id="invoice" onchange="showInput()">
+                            <option value="">發票開立方式</option>
+                            <option value="carrier">手機條碼載具</option>
+                            <option value="paper">隨貨附上紙本發票</option>
+                        </select>
+                    </div>
+                    <div id="carrier_number">
+                        <label for="carrier">載具號碼</label>
+                        <input type="text" id="carrier" name="carrier">
+                    </div>
+                </form>
+            </div>
+            <div class="step_button">
+                <a href="/order_confirm.html" id="nextStep">下一步</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a class="tittle_footer" href="">CHOCOLLAGE</a>
+        <div class="menu_f">
+            <ul id="menu_footer">
+                <li><a class="menu_option_f" href="index(ch).html">首頁</a></li>
+                <li><a class="menu_option_f" href="news.html">最新消息</a></li>
+                <li><a class="menu_option_f" href="">客製禮盒</a></li>
+                <li><a class="menu_option_f" href="">巧克力介紹</a></li>
+                <li><a class="menu_option_f" href="">全部商品</a></li>
+                <li><a class="menu_option_f" href="">沁心晨曦</a></li>
+                <li><a class="menu_option_f" href="">成熟風韻</a></li>
+                <li><a class="menu_option_f" href="">莓果盛宴</a></li>
+                <li><a class="menu_option_f" href="">輕鬆一刻</a></li>
+                <li><a class="menu_option_f" href="">關於我們</a></li>
+                <li><a class="menu_option_f" href="">營業時間</a></li>
+                <li><a class="menu_option_f" href="">營業據點</a></li>
+                <li><a class="menu_option_f" href="">會員</a></li>
+                <li><a class="menu_option_f" href="">會員訂單查詢</a></li>
+                <li><a class="menu_option_f" href="">修改會員資訊</a></li>
+            </ul>
+        </div>
+        <div id="info">
+            地址：35043苗栗縣竹南鎮南北街267號17樓<br>
+            營業時間：8:00 AM~8:00PM<br>
+            電話：0923845338
+        </div>
+        <div id="copyright">@CHOCOLLAGE 2023</div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="/JS/checkout.js"></script>
+
+</html>

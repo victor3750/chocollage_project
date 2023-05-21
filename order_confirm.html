@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>結帳-付款及收件資訊</title>
+    <title>訂單確認</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/CSS/common.css">
-    <link rel="stylesheet" href="/CSS/checkout1.css">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/order_confirm.css">
 </head>
 
 <body>
@@ -35,7 +33,7 @@
             </div>
             <ul class="icon">
                 <li>
-                    <a class="icon_option" href="#">
+                    <a class="icon_option" href="cart.html">
                         <img src="/images/index/購物車.svg" alt="購物車">
                     </a>
                 </li>
@@ -53,28 +51,44 @@
         </section>
         <section id="content">
             <div class="tittle_confirm">
-                <h1>付款及收件資訊</h1>
+                <h1>訂單確認</h1>
             </div>
-            <div id="con_info">
-                <h2>選擇付款方式</h2>
-                <div class="pay">
-                    <input type="radio" name="pay">
-                    <label for="">貨到付款</label><br>
-                    <input type="radio" name="pay">
-                    <label for="">線上支付</label>
-                </div>
-                <h2>選擇取貨方式</h2>
-                <div class="pick">
-                    <input type="radio" name="pick">
-                    <label for="">店鋪自取</label><br>
-                    <input type="radio" name="pick">
-                    <label for="">宅配到府(運費80)</label>
-                </div>
-                <h2>填寫收件人資訊</h2>
-                <h2>選擇發票開立方式</h2>
+            <div class="list_confirm">
+                <table id="item_list">
+                    <thead id="item_thead">
+                        <tr>
+                            <th>品項名稱</th>
+                            <th>數量</th>
+                            <th>金額</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>經典緞帶-六入禮盒</td>
+                            <td class="quan">1盒</td>
+                            <td>$360</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <form name="message_form" id="message_form" action="" method="post">
+                                    <textarea name="message" maxlength="150" id="message"
+                                        placeholder="祝你生日快樂！希望你的生日充滿歡樂和美好的回憶。" readonly></textarea>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="line" colspan="4">
+                                <hr>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="total">
+                <h2>商品金額：　<span>$360</span></h2>
             </div>
             <div class="step_button">
-                <a href="" id="nextStep">下一步</a>
+                <a href="" id="send_order">送出訂單</a>
             </div>
         </section>
     </main>
@@ -107,5 +121,9 @@
         <div id="copyright">@CHOCOLLAGE 2023</div>
     </footer>
 </body>
+<!-- script需放置底部 -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="/JS/cart.js"></script>
 
 </html>
