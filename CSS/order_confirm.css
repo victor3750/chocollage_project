@@ -136,22 +136,26 @@ textarea {
     display: flex;
     justify-content: flex-end;
 }
+
 .total h2 {
     font-size: 20px;
     line-height: 32px;
     letter-spacing: 0.2em;
     color: #613134;
 }
+/* 付款及收件資訊 */
+
 
 /* 按鈕 */
 .step_button {
     width: 1050px;
     margin: 60px auto 0 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-bottom: 100px;
 }
 
+#back,
 #send_order {
     display: block;
     font-size: 20px;
