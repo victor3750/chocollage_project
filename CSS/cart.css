@@ -28,7 +28,6 @@ td {
 
 tr {
     height: 50px;
-    padding: 0 10px;
 }
 
 th {
@@ -98,10 +97,6 @@ td:nth-child(1) {
     width: 300px;
 }
 
-/* th:nth-child(2),
-td:nth-child(2) {
-    padding-left: 10px;
-} */
 
 td:last-child {
     text-align: end;

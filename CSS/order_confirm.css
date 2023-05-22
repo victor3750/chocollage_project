@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /* 共用表單格式 */
-table {
-    width: 1050px;
+#item_list {
+    max-width: 1050px;
     margin: 0 auto;
     border-collapse: separate;
     /* 設置表格邊框和單元格分開 */
@@ -10,11 +10,11 @@ table {
     /* 設置水平方向為 0，垂直方向為 10px */
 }
 
-th:nth-child(1) {
+#item_list th:nth-child(1) {
     border-radius: 10px 0px 0px 10px;
 }
 
-th:nth-last-child(1) {
+#item_list th:nth-last-child(1) {
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -27,11 +27,10 @@ td {
 }
 
 tr {
-    height: 50px;
-    padding: 0 10px;
+    display: flex;
 }
 
-th {
+#item_list th {
     background: #C39681;
     color: #FFFFFF;
 }
@@ -87,40 +86,62 @@ td {
     width: 1050px;
 }
 
-#item_list button {
-    border: none;
-    background: transparent;
+th,
+td {
+    display: block;
 }
 
-th:nth-child(1),
-td:nth-child(1) {
-    text-align: center;
-    width: 300px;
-}
-
-form {
-    padding-top: 40px;
+#item_list tr {
     width: 1050px;
-    margin: 0 auto;
-    text-align: center;
 }
 
-textarea {
-    padding: 10px 20px;
-    width: 900px;
-    height: 250px;
-    border: 1px solid #613134;
+#text th:nth-child(1),
+#text td:nth-child(1) {
+    text-align: start;
+    width: 45%;
+    padding-left: 14px;
+}
+
+#text th:nth-child(2),
+#text td:nth-child(2) {
+    width: 45%;
+}
+#text th:nth-child(3),
+#text td:nth-child(3) {
+    width: 10%;
+}
+/* 圖片、商品資訊、卡片內容區 */
+#info_card {
+    width: 100%;
+}
+#info_card td {
+    width: 100%;
+}
+.img_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#info_card img {
+    margin-left: 14px;
+}
+.item_info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    margin-right: 14px;
     border-radius: 10px;
-    resize: none;
-    outline: none;
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 0.2em;
-    color: #613134;
+    border: 1px solid #613134;
 }
-
+.item_info h3 {
+    border-bottom: 1px solid #613134;
+}
+#items tr {
+    width: 660px;
+}
+/* 每項商品底部分隔線 */
 #line {
-    padding-left: 0;
+    width: 100%;
 }
 
 #line hr {
@@ -143,6 +164,11 @@ textarea {
     letter-spacing: 0.2em;
     color: #613134;
 }
+span {
+    display: inline-block;
+    width: 105px;
+}
+
 /* 付款及收件資訊 */
 
 
