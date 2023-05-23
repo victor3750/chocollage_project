@@ -145,7 +145,7 @@ function showCreditCardInput() {
 // 輸入卡號
 $("input.card").on("keydown", function (e) {
     //console.log(e.which);
-    if ((e.which >= 48 && e.which <= 57) || e.which == 8) {
+    if ((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105) || e.which == 8 || e.which == 37 || e.which == 39 || e.which == 46) {
 
         //console.log(e.target.value.length);
 
