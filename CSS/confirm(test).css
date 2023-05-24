@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/* 共用表單格式 */
+table {
+    width: 1050px;
+    margin: 0 auto;
+    border-collapse: separate;
+    /* 設置表格邊框和單元格分開 */
+    border-spacing: 0 20px;
+    /* 設置水平方向為 0，垂直方向為 10px */
+}
+
+th {
+    background: #C39681;
+}
+
+th:nth-child(1) {
+    border-radius: 10px 0px 0px 10px;
+}
+
+th:nth-last-child(1) {
+    border-radius: 0px 10px 10px 0px;
+}
+
+th,
+td {
+    text-align: left;
+}
+
+tr {
+    height: 50px;
+}
+
+th {
+    padding-left: 32px;
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+}
+
+td {
+    padding-left: 32px;
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
+/* 內容 */
+
+/* banner */
+#banner {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-image: url('/images/confirm/banner_test2.png') ;
+    background-size: cover;
+}
+
+#banner img {
+    position: absolute;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    bottom: 0;
+}
+
+/* 確認清單 */
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 140vh;
+    background: url(/images/confirm/bg_confirm.png);
+    background-size: cover;
+}
+
+.tittle_confirm {
+    padding-top: 100px;
+    width: 100%;
+}
+
+#content h1 {
+    width: 280px;
+    height: 52px;
+    border-bottom: 1px solid #613134;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
+/* 確認清單＆暖心小卡 */
+.list_confirm {
+    margin: 0 auto;
+    width: 1050px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #613134;
+}
+
+form {
+    padding-top: 40px;
+    width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+textarea {
+    padding: 10px 20px;
+    width: 900px;
+    height: 250px;
+    border: 1px solid #613134;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
+textarea:focus {
+    outline: 1.5px solid #C39681;
+    /* 將輸入時outline顏色改色 */
+}
+
+/* 按鈕 */
+.step_button {
+    width: 1050px;
+    margin: 60px auto 0 auto;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#back,
+#toCart {
+    display: block;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #613134;
+    border-radius: 10px;
+    padding: 6px 36px;
+}
