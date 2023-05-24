@@ -51,7 +51,7 @@
             <!-- 會員登入/註冊按鈕區 -->
             <ul class="tabs">
                 <li>
-                    <a href="#sign_in"  class="active initial tabs_left">會員登入</a>
+                    <a href="#sign_in" class="active initial tabs_left">會員登入</a>
                 </li>
                 <li>
                     <a href="#sign_up" class="initial tabs_right">會員註冊</a>
@@ -70,12 +70,15 @@
                     <input type="password" name="password" id="password" title="請輸入密碼" placeholder="請輸入密碼" required>
 
                     <p>(此表單欄位僅為示意，無蒐集資料功能)</p>
-                    <input class="btn" type="submit" value="登入">
+                    <div class="btn_div">
+                        <input class="btn" type="submit" value="登入">
+                    </div>
+
                 </form>
             </div>
 
             <!-- 會員註冊畫面 -->
-            
+
             <div id="sign_up" class="form-action hide" style="display:none">
                 <form>
                     <label for="account">帳號</label>
@@ -95,10 +98,11 @@
                         autocomplete="on">
                     <!-- autocomplete="on" 預設是off，打開在打的時候，就會有打過的記錄可以選 -->
                     <p>(此表單欄位僅為示意，無蒐集資料功能)</p>
-                    <input class="btn" type="submit" value="註冊">
-
+                    <div class="btn_div">
+                        <input class="btn" type="submit" value="註冊">
+                    </div>
                 </form>
-                
+
             </div>
 
 

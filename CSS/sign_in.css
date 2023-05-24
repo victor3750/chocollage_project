@@ -28,10 +28,10 @@ main {
 }
 
 /*內容區*/
-#sign {
+/*#sign {
   position: relative;
-  /*給按鈕定位在form最右下*/
-}
+  給按鈕定位在form最右下
+}*/
 
 /* 標籤區 */
 .tabs {
@@ -141,6 +141,8 @@ form input[type=email] {
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25));
   border-radius: 10px;
 
+  color: #613134;
+
   padding: 9px 0 9px 16px;
 }
 
@@ -157,6 +159,12 @@ form p {
 
 
 /* 按鈕 */
+.btn_div{
+  width: 390px;
+  text-align: center;
+  margin: 20px 0;
+}
+
 form input[type=submit] {
   width: 103px;
   height: 35px;
@@ -166,10 +174,10 @@ form input[type=submit] {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   border-color: transparent;
 
-  /*定位在form最右下*/
+  /*定位在form最右下
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0;*/
 
 }
 
@@ -194,5 +202,5 @@ form input[type=submit] {
 }
 
 footer {
-  margin-top: 120px;
+  margin-top: 80px;
 }
