@@ -104,34 +104,42 @@ td {
 
 #text th:nth-child(2),
 #text td:nth-child(2) {
-    width: 45%;
+    width: 40%;
 }
+
 #text th:nth-child(3),
 #text td:nth-child(3) {
-    width: 10%;
+    width: 15%;
+    padding-right: 14px;
 }
+
 /* 圖片、商品資訊、卡片內容區 */
 #info_card {
     width: 100%;
 }
+
 #info_card td {
     width: 100%;
 }
+
 .img_info {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 .img {
     width: 200px;
     height: 200px;
 }
+
 #info_card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-left: 14px;
 }
+
 .item_info {
     display: flex;
     flex-direction: column;
@@ -141,20 +149,29 @@ td {
     border-radius: 10px;
     border: 1px solid #613134;
 }
+
 .chocolate {
     border-bottom: 1px solid #613134;
 }
+
 #items tr {
     width: 660px;
 }
+
 .warm {
     border-top: 1px solid #613134;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 
 /* 每項商品底部分隔線 */
 #line {
     width: 100%;
+    margin-top: 30px;
 }
 
 #line hr {
@@ -168,7 +185,8 @@ td {
     width: 1050px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: end;
 }
 
 .total h2 {
@@ -176,14 +194,58 @@ td {
     line-height: 32px;
     letter-spacing: 0.2em;
     color: #613134;
+    margin-bottom: 8px;
 }
+
 span {
     display: inline-block;
     width: 105px;
+    text-align: end;
 }
 
 /* 付款及收件資訊 */
+.pay_dely {
+    width: 1050px;
+    margin: 0 auto;
+}
 
+.pay_dely h2 {
+    padding: 0 12px;
+    height: 50px;
+    background: #C39681;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin: 0 0 25px 0;
+}
+
+#PD_items {
+
+    display: flex;
+}
+
+#PD_items h3,
+h4 {
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    margin-bottom: 20px;
+}
+
+#PD_items h3 {
+    width: 205px;
+    font-weight: 500;
+    padding-left: 14px;
+}
+
+#PD_items h4 {
+    font-weight: 400;
+}
 
 /* 按鈕 */
 .step_button {
@@ -205,4 +267,79 @@ span {
     background: #613134;
     border-radius: 10px;
     padding: 6px 36px;
+}
+
+/* 遮罩、彈出視窗 */
+.mask {
+    display: none;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    ;
+}
+
+.completed {
+    position: sticky;
+    top: calc(50% - 552px/2);
+    left: calc(50% - 834px/2);
+    width: 834px;
+    height: 552px;
+    background-color: #FFFFFF;
+}
+.completed > * {
+    width: 315px;
+    margin: 0 auto;
+    text-align: center;
+}
+.check_icon {
+    padding-top: 105px;
+    margin-bottom: 26px;
+}
+.completed h1 {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    margin-bottom: 10px;
+}
+
+.completed p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15em;
+    color: #C39681;
+}
+
+.step_button_comp {
+    width: 315px;
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+#to_index,
+#order_track {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 6px 36px;
+}
+
+#to_index {
+    background: #C39681;
+}
+
+#order_track {
+    background: #613134;
 }
