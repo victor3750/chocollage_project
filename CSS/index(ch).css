@@ -9,6 +9,7 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
 .text {
     position: absolute;
     left: 103px;
@@ -345,6 +346,14 @@
     overflow: hidden;
 }
 
+.type a {
+    transition: transform 0.7s ease-in-out;
+}
+
+.type a:hover {
+    transform: scale(1.1);
+}
+
 .one {
     background: url(/images/index/all_type1.png) center no-repeat;
 }
@@ -402,12 +411,14 @@
     color: #FFFFFF;
     margin-left: 12px;
 }
+
 .hori_line_bs {
     position: absolute;
     bottom: 58px;
     height: 1px;
     width: 83%;
-    border-top: 1px solid #FFFFFF;;
+    border-top: 1px solid #FFFFFF;
+    ;
 }
 
 .bs_content {
@@ -418,15 +429,18 @@
     display: flex;
     gap: 66px;
 }
+
 .bs_img {
     width: 56%;
     border-radius: 10px;
     overflow: hidden;
 }
+
 .bs_img img {
     width: auto;
     height: auto;
 }
+
 .bs_text {
     width: 507px;
     height: 355px;
