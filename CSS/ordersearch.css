@@ -4,141 +4,6 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/*project共用 */
-* {
-    box-sizing: border-box;
-}
 /*section 共用*/
 section {
 	display: flex;
@@ -158,84 +23,6 @@ h1{
     line-height: 38px;
     letter-spacing: 0.2em;
 }
-/* 導覽列 */
-header {
-    position: fixed;
-    display: flex;
-    /* align-items: center; */
-    width: 100%;
-    height: 60px;
-    background: rgba(255, 255, 255, 1);
-    z-index: 1;
-}
-
-.logo {
-    display: block;
-    height: 60px;
-}
-
-.logo img {
-    /* 圖片置中 */
-    margin: 6px 20px;
-}
-
-.tittle {
-    display: block;
-    line-height: 60px;
-    text-decoration: none;
-    font-family: 'GFS Didot';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    letter-spacing: 0.2em;
-    color: #000000;
-
-}
-
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.menu_n {
-    height: 60px;
-    width: 410px;
-}
-#menu {
-    display: flex;
-    gap: 36px;
-    height: 60px;
-    width: 410px;
-}
-
-.menu_option {
-    display: block;
-    text-decoration: none;
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 60px;
-    letter-spacing: 0.1em;
-    color: #000000;
-}
-
-.icon {
-    margin-left: 96px;
-    margin-right: 36px;
-    display: flex;
-    gap: 28px;
-}
-
-.icon_option {
-    display: block;
-    height: 60px;
-}
-
-.icon img {
-    margin: 14px auto;
-}
 /*主要內容區*/
 /*Banner 區*/
 .banner {
@@ -253,7 +40,7 @@ nav {
     bottom: 0;
 }
 /*標題*/
-.title{
+.searchtitle{
     color: #613134;
     margin: 100px;
     padding-top: 11px;
@@ -296,6 +83,11 @@ nav {
     padding-left:14px;
 }
 /*展開表格*/
+.expand {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
 hr{
     border: .1px solid #613134;
 }

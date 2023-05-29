@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/common.css">
     <link rel="stylesheet" href="./css/ordersearch.css">
 </head>
 <body>
@@ -25,8 +26,8 @@
                 <ul id="menu">
                     <li><a class="menu_option" href="news.html">最新消息</a></li>
                     <li><a class="menu_option" href="#">客製禮盒</a></li>
-                    <li><a class="menu_option" href="#">巧克力介紹</a></li>
-                    <li><a class="menu_option" href="#">關於我們</a></li>
+                    <li><a class="menu_option" href="chocolate_desciption.html">巧克力介紹</a></li>
+                    <li><a class="menu_option" href="about.html">關於我們</a></li>
                 </ul>
             </div>
             <ul class="icon">
@@ -45,7 +46,6 @@
     </header>
     <!-- 主要內容區 -->
     <main>
-
         <!-- banner 區 -->
         <section id="banner">
         <div class="banner">
@@ -54,7 +54,7 @@
 
         <!-- 標題 -->
         <section id="ordersearch">
-            <h1 class="title">訂單查詢</h1>
+            <h1 class="searchtitle">訂單查詢</h1>
         </section>
         
         <!-- 大表格 -->
@@ -71,7 +71,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>CCL04191034 <img src="/images/ordersearch/ARROW.png" alt=""></td>
+                    <td>CCL04191034 <button class="expand"><img src="/images/ordersearch/ARROW_expand.png" alt="展開"></button></td>
                     <td>2023/04/19</td>
                     <td>已取貨</td>
                     <td>$720</td>
@@ -194,13 +194,6 @@
                     <li>3顆</li>
                 </ul>
             </div>
-            <div class="price">
-                <ul>
-                    <li>品項金額</li>
-                    <li>$360</li>
-                    <li>$360</li>
-                </ul>
-            </div>
         </div>
         </section>
         
@@ -236,6 +229,8 @@
         </div>
         <div id="copyright">@CHOCOLLAGE 2023</div>
     </footer>
-
 </body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="/JS/ordersearch.js"></script>
 </html>
