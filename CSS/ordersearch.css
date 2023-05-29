@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*project共用 */
+* {
+    box-sizing: border-box;
+}
+/*section 共用*/
+section {
+	display: flex;
+	flex-direction: column;
+	/* 設定主軸為垂直 */
+	justify-content: center;
+	/* 設定主軸(垂直)置中 */
+	align-items: center;
+	/* 設定幅軸(水平)置中 */
+}
+/*h1 中文大標題樣式*/
+h1{   
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+}
+/* 導覽列 */
+header {
+    position: fixed;
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
+
+.logo {
+    display: block;
+    height: 60px;
+}
+
+.logo img {
+    /* 圖片置中 */
+    margin: 6px 20px;
+}
+
+.tittle {
+    display: block;
+    line-height: 60px;
+    text-decoration: none;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    color: #000000;
+
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu_n {
+    height: 60px;
+    width: 410px;
+}
+#menu {
+    display: flex;
+    gap: 36px;
+    height: 60px;
+    width: 410px;
+}
+
+.menu_option {
+    display: block;
+    text-decoration: none;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 60px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.icon {
+    margin-left: 96px;
+    margin-right: 36px;
+    display: flex;
+    gap: 28px;
+}
+
+.icon_option {
+    display: block;
+    height: 60px;
+}
+
+.icon img {
+    margin: 14px auto;
+}
+/*主要內容區*/
+/*Banner 區*/
+.banner {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+.banner img {
+    position: absolute;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    bottom: 0;
+}
+/*標題*/
+.title{
+    color: #613134;
+    margin: 100px;
+    padding-top: 11px;
+	padding-bottom: 11px;
+    padding-left: 140px;
+    padding-right: 140px;
+	border-bottom: 1px solid #613134;
+}
+.order th{
+    background-color: #C39681;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: white;
+    padding-right:194px;
+    margin: 9px 14px;
+}
+.order thead th:first-child {
+    border-radius: 10px 0 0 10px;
+    padding-left:14px;
+}
+.order thead th:last-child {
+    border-radius: 0 10px 10px 0;
+    padding-right:14px;
+}
+.order td{
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color:#613134;
+    padding-top: 14px;
+}
+.order table tbody td:first-child{
+    padding-left:14px;
+}
+/*展開表格*/
+hr{
+    border: .1px solid #613134;
+}
+#ordercontent{
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+#ordercontent ul{
+    width: 768px;
+}
+#ordercontent ul li{
+    display:inline;
+    margin-top: 30px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #613134; 
+    justify-content: space-between;
+}
+.dragform{
+    border: 1px solid #613134;
+    border-radius: 10px;
+    padding: 20px 97px;
+}
+
+/* 頁尾 */
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0px;
+    width: 100%;
+    height: 150px;
+    background: #E6DEDD;
+}
+.tittle_footer {
+    display: block;
+    line-height: 150px;
+    text-decoration: none;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 0.2em;
+    color: #000000;
+    margin-left: 16px;
+}
+footer .menu_f {
+    width: 600px;
+    height: 150px;
+}
+#menu_footer {
+    width: 600px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 27px auto;
+}
+
+#menu_footer li {
+    margin-right: 48px;
+}
+
+.menu_option_f {
+    display: block;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #613134;
+    text-decoration: none;
+}
+
+#info {
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #C39681;
+    height: 96px;
+    margin: 27px 16px 27px 0;
+    overflow: hidden;
+}
+
+#copyright {
+    position: absolute;
+    right: 16px;
+    bottom: 4px;
+    font-family: 'GFS Didot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    color: #9D9D9D;
+}
