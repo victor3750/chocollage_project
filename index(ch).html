@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
         rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/CSS/common.css">
     <link rel="stylesheet" href="/CSS/index(ch).css">
 </head>
@@ -87,22 +90,66 @@
                 <h1>最新消息</h1>
                 <p class="hori_line_news"></p>
             </div>
-            <div class="news_content">
-                <div class="upper">
-                    <div class="news_img">
-                        <img src="/images/index/news_img.png" alt="最新消息">
-                    </div>
-                    <div class="news_text">
-                        <h1>品嚐最新的美味組合：我們的藍莓巧克力與優格聯名！</h1>
-                        <p>我們非常榮幸宣布，我們的藍莓巧克力與當地一家優格品牌合作，推出了一種全新的美味組合！這種新組合完美地結合了堅果巧克力的豐富風味和優格的清爽口感，為您帶來一種獨特的口味體驗。這種藍莓巧克力與優格聯名的產品現在已經在我們的商店上市，快來品嚐吧！
-                        </p>
-                        <div class="more">
-                            <a href="">view more <br> <img src="/images/index/arrow.png" alt="more"></a>
+            <div class="product-slider news_content">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="upper">
+                                <div class="news_img">
+                                    <img src="/images/index/news_img.png" alt="最新消息">
+                                </div>
+                                <div class="news_text">
+                                    <h1>品嚐最新的美味組合：我們的藍莓巧克力與優格聯名！</h1>
+                                    <p>我們非常榮幸宣布，我們的藍莓巧克力與當地一家優格品牌合作，推出了一種全新的美味組合！這種新組合完美地結合了堅果巧克力的豐富風味和優格的清爽口感，為您帶來一種獨特的口味體驗。這種藍莓巧克力與優格聯名的產品現在已經在我們的商店上市，快來品嚐吧！
+                                    </p>
+                                    <div class="more">
+                                        <a href="">view more <br> <img src="/images/index/arrow.png" alt="more"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="upper">
+                                <div class="news_img">
+                                    <img src="/images/index/news_img2.png" alt="最新消息">
+                                </div>
+                                <div class="news_text">
+                                    <h1>品嚐最新的美味組合：我們的藍莓巧克力與優格聯名！</h1>
+                                    <p>我們非常榮幸宣布，我們的藍莓巧克力與當地一家優格品牌合作，推出了一種全新的美味組合！這種新組合完美地結合了堅果巧克力的豐富風味和優格的清爽口感，為您帶來一種獨特的口味體驗。這種藍莓巧克力與優格聯名的產品現在已經在我們的商店上市，快來品嚐吧！
+                                    </p>
+                                    <div class="more">
+                                        <a href="">view more <br> <img src="/images/index/arrow.png" alt="more"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="upper">
+                                <div class="news_img">
+                                    <img src="/images/index/news_img3.png" alt="最新消息">
+                                </div>
+                                <div class="news_text">
+                                    <h1>品嚐最新的美味組合：我們的藍莓巧克力與優格聯名！</h1>
+                                    <p>我們非常榮幸宣布，我們的藍莓巧克力與當地一家優格品牌合作，推出了一種全新的美味組合！這種新組合完美地結合了堅果巧克力的豐富風味和優格的清爽口感，為您帶來一種獨特的口味體驗。這種藍莓巧克力與優格聯名的產品現在已經在我們的商店上市，快來品嚐吧！
+                                    </p>
+                                    <div class="more">
+                                        <a href="">view more <br> <img src="/images/index/arrow.png" alt="more"></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="lower">
-                    <a id="first" href="">01</a><a id="second" href="">02</a><a id="third" href="">03</a>
+                <div class="clearfix">
+                    <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="item active lower">
+                                <div data-target="#carousel" data-slide-to="0" class="thumb"><a href="#">01</a></div>
+                                <div data-target="#carousel" data-slide-to="1" class="thumb"><a href="#">02</a></div>
+                                <div data-target="#carousel" data-slide-to="2" class="thumb"><a href="#">03</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -167,6 +214,7 @@
         <div id="copyright">@CHOCOLLAGE 2023</div>
     </footer>
 </body>
-s
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </html>
