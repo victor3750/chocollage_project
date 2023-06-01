@@ -249,10 +249,13 @@
 
 .more {
     width: 630px;
+    display: flex;
+    justify-content: end;
 }
 
 .more a {
     display: block;
+    width: fit-content;
     font-family: 'GFS Didot';
     font-style: normal;
     font-weight: 400;
@@ -282,17 +285,23 @@
 }
 
 /* 輪播 */
+.carousel-item {
+    transition: 1.5s ease-in-out;
+}
+
 .product-slider #thumbcarousel .item {
     padding-left: 5px;
 }
 
 .product-slider #thumbcarousel .item .thumb {
-    display: inline-block;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 .lower a:hover {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    transition: 0.5s ease-in-out;
 }
 
 /* 所有類別 */
