@@ -96,8 +96,9 @@ td:nth-child(1) {
     text-align: center;
     width: 300px;
 }
-
-
+th:nth-child(3){
+    width: 200px;
+}
 td:last-child {
     text-align: end;
 }
