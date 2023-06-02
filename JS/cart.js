@@ -14,10 +14,10 @@ quantityInputs.forEach(quantityInput => {
         priceDisplay.textContent = `$${price || 0}`;
     });
 });
-// 數量增減
+// 數量增減鈕
 $(function () {
     // This button will increment the value
-    $('[class^="list_"] .qtyplus').click(function (e) {
+    $('[id^="list_"] .qtyplus').click(function (e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the parent row of the clicked button
@@ -30,7 +30,11 @@ $(function () {
         if (!isNaN(currentVal)) {
             // Increment
             parentRow.find('input[name=' + fieldName + ']').val(currentVal + 1);
-            
+            const selectedProduct = parentRow.find('.item').text().trim();
+            const quantity = parseInt(parentRow.find('input[name=' + fieldName + ']').val()) || 0;
+            const priceDisplay = parentRow.find('.price');
+            const price = priceList[selectedProduct] * quantity;
+            priceDisplay.text(`$${price || 0}`);
         } else {
             // Otherwise put a 0 there
             parentRow.find('input[name=' + fieldName + ']').val(0);
@@ -38,7 +42,7 @@ $(function () {
     });
 
     // This button will decrement the value till 0
-    $('[class^="list_"] .qtyminus').click(function (e) {
+    $('[id^="list_"] .qtyminus').click(function (e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the parent row of the clicked button
@@ -51,6 +55,11 @@ $(function () {
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
             parentRow.find('input[name=' + fieldName + ']').val(currentVal - 1);
+            const selectedProduct = parentRow.find('.item').text().trim();
+            const quantity = parseInt(parentRow.find('input[name=' + fieldName + ']').val()) || 0;
+            const priceDisplay = parentRow.find('.price');
+            const price = priceList[selectedProduct] * quantity;
+            priceDisplay.text(`$${price || 0}`);
         } else {
             // Otherwise put a 0 there
             parentRow.find('input[name=' + fieldName + ']').val(0);
@@ -62,16 +71,18 @@ $(function () {
 
 // 購物車展開收合鍵
 $(function () {
-    $('.expand').click(function () {
+    $('[id^="list_"] .expand').click(function () {
         var img = $(this).find('img');
+        var listId = $(this).closest('tr').attr('id');
         if (img.attr('src') === '/images/cart/expand.svg') {
             img.attr('src', '/images/cart/close.svg');
             img.attr('alt', '收合');
         } else {
             img.attr('src', '/images/cart/expand.svg');
             img.attr('alt', '展開');
+            
         }
-        $(".contents-row").slideToggle('slow');
+        $('.contents-row').slideToggle('slow');
     });
 });
 
