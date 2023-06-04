@@ -6,8 +6,8 @@ table {
     margin: 0 auto;
     border-collapse: separate;
     /* 設置表格邊框和單元格分開 */
-    border-spacing: 0 20px;
-    /* 設置水平方向為 0，垂直方向為 10px */
+    border-spacing: 0 10px;
+    /* 設置水平方向為 0，垂直方向為 5px */
 }
 
 th:nth-child(1) {
@@ -16,11 +16,12 @@ th:nth-child(1) {
 
 th:nth-last-child(1) {
     border-radius: 0px 10px 10px 0px;
+    width: 48px;
 }
 
 th,
 td {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 50px;
     letter-spacing: 0.2em;
     text-align: left;
@@ -30,6 +31,10 @@ tr {
     height: 50px;
 }
 
+#separate {
+    height: 20px;
+}
+
 th {
     background: #C39681;
     color: #FFFFFF;
@@ -37,6 +42,7 @@ th {
 
 td {
     color: #613134;
+    vertical-align: top;
 }
 
 /* banner */
@@ -58,7 +64,7 @@ td {
 #content {
     position: relative;
     width: 100%;
-    min-height: 120vh;
+    min-height: 100vh;
     background: url(/images/confirm/bg_confirm.png);
     background-size: cover;
 }
@@ -94,11 +100,13 @@ td {
 th:nth-child(1),
 td:nth-child(1) {
     text-align: center;
-    width: 300px;
+    width: 250px;
 }
-th:nth-child(3){
-    width: 200px;
+
+th:nth-last-child(2) {
+    width: 150px;
 }
+
 td:last-child {
     text-align: end;
 }
@@ -108,15 +116,54 @@ td:last-child {
     cursor: pointer;
 }
 
-.contents-row {
+[class^="contents-row_"] {
     display: none;
 }
 
+/* 一開始先隱藏內容 */
+
+
 .contents {
-    padding: 10px;
+    padding: 0 10px;
     background: #E6DEDD;
     border-radius: 10px;
+    margin-right: 20px;
+    font-size: 14px;
 }
+
+/* 暖心小卡 */
+form {
+    padding-top: 10px;
+    width: 300px;
+    margin: 0;
+    text-align: center;
+}
+
+textarea {
+    padding: 10px 15px;
+    width: 100%;
+    min-height: 150px;
+    border: none;
+    background: #E6DEDD;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #d2d2d2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 
 /* 垃圾桶、加減符號垂直置中 */
 .trash {
@@ -149,25 +196,8 @@ td:last-child {
     color: #613134;
 }
 
-form {
-    padding-top: 40px;
-    width: 1050px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-textarea {
-    padding: 10px 20px;
-    width: 900px;
-    height: 250px;
-    border: 1px solid #613134;
-    border-radius: 10px;
-    resize: none;
-    outline: none;
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 0.2em;
-    color: #613134;
+tr {
+    border-bottom: #613134 1px solid;
 }
 
 #line {
@@ -180,6 +210,22 @@ textarea {
     border: none;
 }
 
+/* 購物車為空提示 */
+.hint {
+    display: none;
+    width: 1050px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hint h2 {
+    font-size: 20px;
+    line-height: 150px;
+    letter-spacing: 0.2em;
+    color: #613134;
+}
+
 /* 商品總額 */
 .total {
     width: 1050px;
@@ -187,6 +233,7 @@ textarea {
     display: flex;
     justify-content: flex-end;
 }
+
 .total h2 {
     font-size: 20px;
     line-height: 32px;
@@ -203,8 +250,17 @@ textarea {
     padding-bottom: 100px;
 }
 
-#shopping,
-#checkout {
+.step_button2 {
+    width: 1050px;
+    margin: 60px auto 0 auto;
+    display: none;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+#contShopping,
+#checkout,
+#shoppingNow {
     display: block;
     font-size: 20px;
     line-height: 32px;
@@ -214,4 +270,70 @@ textarea {
     background: #613134;
     border-radius: 10px;
     padding: 6px 36px;
+}
+
+/* 刪除視窗 */
+.mask {
+    display: none;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    ;
+}
+
+.delete_wd {
+    position: sticky;
+    top: calc(50% - 180px/2);
+    left: calc(50% - 400px/2);
+    width: 400px;
+    height: 180px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.delete_wd>* {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.delete_wd h1 {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    padding-top: 35px;
+    margin-bottom: 10px;
+}
+
+.step_button_del {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+#con_del,
+#cancel {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 6px 24px;
+}
+
+#con_del {
+    background: #C39681;
+}
+
+#cancel {
+    background: #613134;
 }
