@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     height: fit-content;
-    background-image: url('/images/confirm/banner_test2.png') ;
+    background-image: url('../images/confirm/banner_test2.png') ;
     background-size: cover;
 }
 
@@ -22,7 +22,7 @@
     position: relative;
     width: 100%;
     min-height: 120vh;
-    background: url(/images/confirm/bg_confirm.png);
+    background: url(../images/confirm/bg_confirm.png);
     background-size: cover;
 }
 

@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/index/bg.png);
+    background-image: url(../images/index/bg.png);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -110,7 +110,7 @@
     position: relative;
     width: 100%;
     height: 88vh;
-    background: url(/images/index/Mask.png);
+    background: url(../images/index/Mask.png);
     background-size: cover;
 }
 
@@ -397,19 +397,19 @@
 }
 
 .one {
-    background: url(/images/index/all_type1.png) center no-repeat;
+    background: url(../images/index/all_type1.png) center no-repeat;
 }
 
 .two {
-    background: url(/images/index/all_type2.png) center no-repeat
+    background: url(../images/index/all_type2.png) center no-repeat
 }
 
 .three {
-    background: url(/images/index/all_type3.png) center no-repeat;
+    background: url(../images/index/all_type3.png) center no-repeat;
 }
 
 .four {
-    background: url(/images/index/all_type4.png) center no-repeat;
+    background: url(../images/index/all_type4.png) center no-repeat;
 }
 
 .one,
