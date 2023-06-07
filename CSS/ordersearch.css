@@ -40,6 +40,9 @@ h1{
     bottom: 0;
 }
 /*標題*/
+#form{
+    margin-bottom: 300px;
+}
 .searchtitle{
     color: #613134;
     margin: 100px;
