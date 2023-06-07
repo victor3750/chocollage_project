@@ -16,24 +16,24 @@
 
 <body>
     <header>
-        <a class="logo" href="index(ch).html">
-            <img src="images/index/Black and White Collection 10.svg" alt="logo">
-        </a>
-        <a class="tittle" href="index(ch).html">
-            CHOCOLLAGE
-        </a>
-        <nav>
-            <div class="menu_n">
-                <ul id="menu">
-                    <li><a class="menu_option" href="news.html">最新消息</a></li>
-                    <li><a class="menu_option" href="#">客製禮盒</a></li>
-                    <li><a class="menu_option" href="#">巧克力介紹</a></li>
-                    <li><a class="menu_option" href="#">關於我們</a></li>
-                </ul>
-            </div>
+        <div class="logo_title">
+            <a class="logo" href="index(ch).html">
+                <img src="images/index/Black and White Collection 10.svg" alt="logo">
+            </a>
+            <a class="title" href="index(ch).html">
+                CHOCOLLAGE
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul id="menu">
+                <li><a class="menu_option" href="news.html">最新消息</a></li>
+                <li><a class="menu_option" href="#">客製禮盒</a></li>
+                <li><a class="menu_option" href="chocolate_desciption.html">巧克力介紹</a></li>
+                <li><a class="menu_option" href="about.html">關於我們</a></li>
+            </ul>
             <ul class="icon">
                 <li>
-                    <a class="icon_option" href="cart.html">
+                    <a class="icon_option" href="#">
                         <img src="images/index/購物車.svg" alt="購物車">
                     </a>
                 </li>
@@ -44,6 +44,11 @@
                 </li>
             </ul>
         </nav>
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
     <main>
         <section id="banner">
@@ -164,6 +169,7 @@
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <!-- Lottie -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="JS/hamburger.js"></script>
 <script src="JS/checkout.js"></script>
 
 </html>
