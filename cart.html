@@ -62,16 +62,16 @@
                 <table id="item_list">
                     <thead id="item_thead">
                         <tr>
-                            <th>數量</th>
-                            <th>品項名稱</th>
-                            <th>暖心小卡</th>
-                            <th>金額</th>
-                            <th></th>
+                            <th class="col">數量</th>
+                            <th class="col">品項名稱</th>
+                            <th class="col">暖心小卡</th>
+                            <th class="col">金額</th>
+                            <th class="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="list_1">
-                            <td class="quan">
+                            <td data-title="數量" class="quan">
                                 <a class="qtyminus" field="quantity" href=""><img src="images/cart/minus.svg"
                                         alt=""></a>
                                 <div>
@@ -79,7 +79,7 @@
                                 </div>
                                 <a class="qtyplus" field="quantity" href=""><img src="images/cart/plus.svg" alt=""></a>
                             </td>
-                            <td class="item">
+                            <td data-title="品項名稱" class="item">
                                 經典緞帶-四入禮盒<button class="expand"><img src="images/cart/expand.svg" alt="展開"></button><br>
                                 <div class="contents-row_1 contents">
                                     <ul>
@@ -89,14 +89,14 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td class="w_card">
+                            <td data-title="暖心小卡" class="w_card">
                                 <form name="message_form" id="message_form" action="" method="post">
                                     <textarea name="message" maxlength="150" id="message"
                                         placeholder="祝你生日快樂！希望你的生日充滿歡樂和美好的回憶。祝你生日快樂！希望你的生日充滿歡樂和美好的回憶祝你生日快樂！希望你的生日充滿歡樂和美好的回憶祝你生日快樂！希望你的生日充滿歡樂和美好的回憶祝你生日快樂！希望你的生日充滿歡樂和美好的回憶" readonly></textarea>
                                 </form>
                             </td>
-                            <td class="price">$0</td>
-                            <td><button class="trash"><img src="images/cart/trash.svg" alt=""></button></td>
+                            <td data-title="金額" class="price">$0</td>
+                            <td data-title=""><button class="trash"><img src="images/cart/trash.svg" alt=""></button></td>
                         </tr>
                         <tr id="separate" class="list_1">
                             <td id="line" colspan="5">
@@ -104,7 +104,7 @@
                             </td>
                         </tr>
                         <tr class="list_2">
-                            <td class="quan">
+                            <td data-title="數量" class="quan">
                                 <a class="qtyminus" field="quantity" href=""><img src="images/cart/minus.svg"
                                         alt=""></a>
                                 <div>
@@ -112,7 +112,7 @@
                                 </div>
                                 <a class="qtyplus" field="quantity" href=""><img src="images/cart/plus.svg" alt=""></a>
                             </td>
-                            <td class="item">
+                            <td data-title="品項名稱" class="item">
                                 經典緞帶-八入禮盒<button class="expand"><img src="images/cart/expand.svg" alt="展開"></button><br>
                                 <div class="contents-row_2 contents">
                                     <ul>
@@ -122,14 +122,14 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td class="w_card">
+                            <td data-title="暖心小卡" class="w_card">
                                 <form name="message_form" id="message_form" action="" method="post">
                                     <textarea name="message" maxlength="150" id="message"
                                         placeholder="祝你新婚快樂！希望你的婚姻充滿歡樂和美好的回憶。" readonly></textarea>
                                 </form>
                             </td>
-                            <td class="price">$0</td>
-                            <td><button class="trash"><img src="images/cart/trash.svg" alt=""></button></td>
+                            <td data-title="金額" class="price">$0</td>
+                            <td data-title=""><button class="trash"><img src="images/cart/trash.svg" alt=""></button></td>
                         </tr>
                         <tr id="separate" class="list_2">
                             <td id="line" colspan="5">
@@ -164,24 +164,24 @@
         </div>
     </main>
     <footer>
-        <a class="tittle_footer" href="">CHOCOLLAGE</a>
         <div class="menu_f">
+            <a class="tittle_footer" href="">CHOCOLLAGE</a>
             <ul id="menu_footer">
-                <li><a class="menu_option_f" href="index(ch).html">首頁</a></li>
+                <!-- <li><a class="menu_option_f" href="index(ch).html">首頁</a></li> -->
                 <li><a class="menu_option_f" href="news.html">最新消息</a></li>
                 <li><a class="menu_option_f" href="">客製禮盒</a></li>
                 <li><a class="menu_option_f" href="">巧克力介紹</a></li>
-                <li><a class="menu_option_f" href="">全部商品</a></li>
-                <li><a class="menu_option_f" href="">沁心晨曦</a></li>
+                <!-- <li><a class="menu_option_f" href="">全部商品</a></li> -->
+                <!-- <li><a class="menu_option_f" href="">沁心晨曦</a></li>
                 <li><a class="menu_option_f" href="">成熟風韻</a></li>
                 <li><a class="menu_option_f" href="">莓果盛宴</a></li>
-                <li><a class="menu_option_f" href="">輕鬆一刻</a></li>
+                <li><a class="menu_option_f" href="">輕鬆一刻</a></li> -->
                 <li><a class="menu_option_f" href="">關於我們</a></li>
-                <li><a class="menu_option_f" href="">營業時間</a></li>
-                <li><a class="menu_option_f" href="">營業據點</a></li>
+                <!-- <li><a class="menu_option_f" href="">營業時間</a></li>
+                <li><a class="menu_option_f" href="">營業據點</a></li> -->
                 <li><a class="menu_option_f" href="">會員</a></li>
-                <li><a class="menu_option_f" href="">會員訂單查詢</a></li>
-                <li><a class="menu_option_f" href="">修改會員資訊</a></li>
+                <li><a class="menu_option_f" href="">訂單查詢</a></li>
+                <!-- <li><a class="menu_option_f" href="">修改會員資訊</a></li> -->
             </ul>
         </div>
         <div id="info">
