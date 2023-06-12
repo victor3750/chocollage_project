@@ -46,7 +46,9 @@
 
 /* 填寫資訊區 */
 .con_info {
-    width: 1050px;
+    width: 55%;
+    min-width: 600px;
+    max-width: 1050px;
     min-height: 1000px;
     margin: 0 auto;
 }
@@ -61,6 +63,7 @@ h3 {
 
 /* 深紅色標題 */
 h2 {
+    width: 100%;
     padding: 0 12px;
     height: 50px;
     background: #C39681;
@@ -213,7 +216,13 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0) inset;
     transition: background-color 5000s ease-in-out 0s;
 } */
-
+@media (max-width:820px) {
+    .con_info  {
+        width: 55%;
+        min-width: 400px;
+        max-width: 600px;
+    }
+}
 /* 按鈕 */
 .step_button {
     width: 1050px;
