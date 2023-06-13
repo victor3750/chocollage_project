@@ -13,15 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/common2.css"> <!-- bar+規範的css -->
-    <!-- <link rel="stylesheet" href="./css/chocolate_desciption.css"> 最新消息的css -->
-    <link rel="stylesheet" href="./css/chocolate_desciption_test.css">
+    <link rel="stylesheet" href="css/common.css"> <!-- bar+規範的css -->
+    <!-- <link rel="stylesheet" href="css/chocolate_desciption.css"> 最新消息的css -->
+    <link rel="stylesheet" href="css/chocolate_desciption.css">
 </head>
 
 <body>
     <header>
         <a class="logo" href="index(ch).html">
-            <img src="./images/common/Black and White Collection 10.svg" alt="logo">
+            <img src="images/common/Black and White Collection 10.svg" alt="logo">
         </a>
         <a class="tittle" href="index(ch).html">
             CHOCOLLAGE
@@ -36,12 +36,12 @@
             <ul class="icon">
                 <li>
                     <a class="icon_option" href="#">
-                        <img src="./images/common/購物車.svg" alt="購物車">
+                        <img src="images/common/購物車.svg" alt="購物車">
                     </a>
                 </li>
                 <li>
                     <a class="icon_option" href="sign_in.html">
-                        <img src="./images/common/會員.svg" alt="會員">
+                        <img src="images/common/會員.svg" alt="會員">
                     </a>
                 </li>
             </ul>
@@ -66,17 +66,17 @@
         <section id="product">
             <!-- 商品篩選區 -->
             <ul class="check_list">
-                <li class="check2"><a class="check_option" href="#">全部商品</a></li>
-                <li class="check3"><a class="check_option" href="#">沁心晨曦</a></li>
-                <li class="check1"><a class="check_option" href="#">成熟風韻</a></li>
-                <li class="check4"><a class="check_option" href="#">莓果盛宴</a></li>
-                <li class="check5"><a class="check_option" href="#">輕鬆一刻</a></li>
+                <li class="allItem"><a class="allItem" href="#">全部商品</a></li>
+                <li class="morning"><a  href="#">沁心晨曦</a></li>
+                <li class="afternoon"><a  href="#">優雅午後</a></li>
+                <li class="mature"><a  href="#">成熟風韻</a></li>
+                <li class="relax" ><a href="#">輕鬆一刻</a></li>
             </ul>
 
             <div class="list_box">
-                <article class="list_item">
+                <article class="morning">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/1.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/1.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -88,9 +88,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="morning">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/2.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/2.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -102,9 +102,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="afternoon">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/3.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/3.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -116,9 +116,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="afternoon">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/4.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/4.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -130,9 +130,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="mature">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/5.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/5.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -144,9 +144,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="mature">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/6.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/6.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -158,9 +158,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="relax">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/1.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/1.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -172,9 +172,9 @@
                     </div>
                 </article>
 
-                <article class="list_item">
+                <article class="relax">
                     <div class="item_left">
-                        <figure><img src="./images/chocolate_desciption/product/2.png" alt=""></figure>
+                        <figure><img src="images/chocolate_desciption/product/2.png" alt=""></figure>
                         <p class="price">$60</p>
                     </div>
 
@@ -222,6 +222,8 @@
         <div id="copyright">@CHOCOLLAGE 2023</div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/chocolate_desciption.js"></script>
 </body>
 
 </html>

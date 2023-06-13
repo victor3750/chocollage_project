@@ -1,0 +1,399 @@
+main {
+    /* margin-top: 60px; */
+
+    display: flex;
+    flex-direction: column;
+    /*垂直排*/
+    align-items: center;
+    /*副軸(水平)置中*/
+
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-image: url(../images/customization/bg_confirm.png);
+    background-size: cover;
+}
+
+#banner #customization {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner {
+    background-image: url(../images/news/banner_big.png);
+    background-size: cover;
+    background-position: center;
+
+    /*object-fit: cover; 會覆蓋且自動置中*/
+    width: 100%;
+    height: 220px;
+}
+
+.title {
+    color: #613134;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+
+    text-align: center;
+    margin: 100px;
+}
+
+.title::after {
+    content: "";
+    /*必寫，content 就算沒內容也一定要寫*/
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: #613134;
+    margin: auto;
+    /*水平置中*/
+}
+
+/*內容區*/
+/*整體*/
+#accordion {
+    /* width: 1050px; */
+    width: 70vw;
+    max-width: 1050px;
+
+    /* height: 100vh; 暫時撐高 */
+    margin-bottom: 80px;
+}
+
+#accordion h3 {
+    /*外框*/
+    /* width: 1050px; */
+    width: 100%;
+
+    height: 50px;
+    background: #E6DEDD;
+    border-radius: 10px;
+
+    /*文字*/
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    line-height: 50px;
+
+    margin-top: 52px;
+    padding-left: 12px;
+
+    /* 字跟按鈕 */
+    display: flex;
+    flex-direction: row-reverse;
+    /*span被自動生成在標題字前面，只好先反過來排*/
+    justify-content: space-between;
+    /*貼頭尾*/
+}
+
+/* 按鈕測試
+
+已知被選擇的面板，h3(跟自動生成的span)為
+<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active" 
+role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0">
+<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>選擇顆數</h3>
+
+沒有被選擇的面板
+<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" 
+role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1">
+<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>選擇口味</h3>
+
+感覺可以控制
+h3下的span位置 & ui-accordion-header-active(啟用)下的span 跟 ui-accordion-header-collapsed 沒啟用的span
+
+*/
+
+/* 展開收合按鈕 */
+h3 span {
+    width: 50px;
+    height: 50px;
+    /* 預設要是檢的 */
+    background-image: url(../images/customization/Collapse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-accordion-header-active span {
+    background-image: url(../images/customization/Collapse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-accordion-header-collapsed span {
+    background-image: url(../images/customization/add.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 選擇的幾入提示 */
+
+.hit {
+    /*用JS長出來的*/
+    margin-left: -190px;
+}
+
+
+/*客製選擇區-Step1*/
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    /*貼頭尾，中間均分*/
+    margin-right: 32px;
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio [type="radio"]:checked+label,
+.radio [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    color: #613134;
+}
+
+.radio [type="radio"]:checked+label:before,
+.radio [type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #613134;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.radio [type="radio"]:checked+label:after,
+.radio [type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #C39681;
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.radio [type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.radio [type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+
+/*客製選擇區-Step2*/
+
+
+.choho_list {
+    width: calc(100% + 30px);
+    display: flex;
+    /*item們水平排*/
+    flex-wrap: wrap;
+    /*寬度不夠就換行*/
+    /* margin-top: 40px; */
+    justify-content: flex-start
+        /* justify-content: space-between; */
+
+}
+
+.choco_item {
+    /* width: 20%; */
+    width: 200px;
+    height: 200px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.choco_item:last-child {
+    margin-right: 0;
+}
+
+.choco_item figure,
+.choco_item figure img {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.choco_name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    
+    display: block;
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.quan {
+    /*商品 -[___]+ 區*/
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    /*貼頭尾*/
+    align-items: center;
+    /*副軸置中*/
+    margin-top: 10px;
+}
+
+.qty {
+    /*-[___]+的數字框*/
+    width: 100px;
+    text-align: center;
+
+    background: #FFFFFF;
+    border: 1px solid #613134;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.increment {
+    /* + 按鈕*/
+    position: relative;
+}
+
+
+/* 選擇超過時的提示*/
+.over {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #613134;
+
+    width: 150px;
+    position: absolute;
+    top: 30px;
+    right: 19px;
+}
+
+
+/*客製選擇區-Step3*/
+
+.box_list {
+    /* width: calc(100% + 100px); */
+    display: flex;
+    /*item們水平排*/
+    flex-wrap: wrap;
+    /*寬度不夠就換行*/
+
+    margin-top: 40px;
+    justify-content: space-between;
+
+}
+
+.box_item {
+    width: 30%;
+    max-width: 300px;
+    margin-top: 40px;
+    position: relative;
+    /* justify-content: flex-start; */
+    /* margin-right: 70px; */
+}
+
+.box_item:last-child {
+    margin-right: 0px;
+}
+
+.box_item figure,
+.box_item figure img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* hover會顯示和名稱 */
+
+.box_item:hover .spanBG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+}
+
+.box_item span {
+    display: none;
+    /* 一開始不顯示不占位 */
+}
+
+.box_item:hover span {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    /* line-height: 32px; */
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+}
+
+
+/* 禮盒被選時 */
+.boxClick {
+    border: #613134 4px dashed;
+    padding: 10px;
+}
+
+
+
+/* btn_下一步 */
+
+#next {
+    width: 140px;
+    height: 45px;
+    background: #613134;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin-bottom: 80px;
+}
+
+#next a {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+
+    text-align: center;
+    line-height: 45px;
+}

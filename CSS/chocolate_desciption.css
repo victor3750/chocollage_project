@@ -35,7 +35,8 @@ main {
   position: absolute;
   right: 105px;
   top: 130px;
-  width: 590px;
+  width: 40%;
+  min-width: 305px;
   color: #613134;
 }
 
@@ -76,7 +77,7 @@ main {
   
 }
 
-.check_option {
+.check_list > li>a{
   display: block;
   width: 15vw;
 
@@ -93,7 +94,7 @@ main {
   z-index: -1;
 }
 
-.check_option::after {
+.check_list > li>a::after {
   content: "";
   /*必寫，content 就算沒內容也一定要寫*/
   display: block;
@@ -105,6 +106,16 @@ main {
   bottom: 0px;
 }
 
+/* 篩選器被點選的時候，會變顏色 */
+
+.check_list > .active_color>a{
+  color: #613134;
+}
+
+.check_list >.active_color>a::after{
+  background-color: #613134;
+}
+
 
 /* 商品介紹區 */
 /* 排版 */
@@ -113,19 +124,31 @@ main {
   justify-content: center;
   /* 水平置中 */
 
-  width: 100vw;
-  /* height: 100vh; */
-  /*暫時撐開*/
-
-  flex-wrap: wrap
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.list_item {
-  width: 42vw;
+
+.list_box > article {
+  width: 45%;
+  min-width: 545px;
   margin: 0 30px 40px;
   position: relative;
   z-index: -1;
+  overflow: hidden; /* 新增這行 */
 }
+
+.list_box > .hide {
+  /* 隱藏非選項的商品
+  visibility: hidden;
+  height: 0;
+  雖然可以隱藏但還是會撐開空間
+  所以用margin設負數避免上下被撐開 */
+  visibility: hidden;
+  height: 0;
+  margin: -10px 0;
+}
+
 
 
 /* 左側 */
@@ -133,9 +156,6 @@ main {
 
 /* 圖片 */
 figure {
-  width: 20vw;
-  height: 20vw;
-
   height: 300px;
   width: 300px;
 
@@ -171,6 +191,7 @@ figure img {
 .list_right {
 
   height: 300px;
+  min-width: 426px;
   color: #613134;
   background: linear-gradient(125.78deg, #C39681 23.06%, rgba(227, 227, 227, 0.6) 58.7%, #C39681 99.24%);
 
