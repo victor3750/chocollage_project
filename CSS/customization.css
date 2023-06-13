@@ -33,31 +33,37 @@ body {
 }
 
 #customization .title {
-    color: #613134;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 0.2em;
+    color: #613134;
 
     text-align: center;
     margin: 100px;
 }
 
-.title::after {
+#customization .title::after {
     content: "";
     /*必寫，content 就算沒內容也一定要寫*/
     display: block;
     width: 20%;
+    min-width: 200px;
     height: 1px;
     background-color: #613134;
     margin: auto;
     /*水平置中*/
+
+    margin-top: 13px;
 }
 
 /*內容區*/
 /*整體*/
 #accordion {
     /* width: 1050px; */
-    width: 70vw;
+    width: 73vw;
     max-width: 1050px;
 
     /* height: 100vh; 暫時撐高 */
@@ -145,6 +151,11 @@ h3 span {
     justify-content: space-between;
     /*貼頭尾，中間均分*/
     margin-right: 32px;
+    flex-wrap: wrap;
+}
+
+.radio {
+    width: 130px;
 }
 
 
@@ -205,6 +216,14 @@ h3 span {
 
 
 
+@media (max-width:820px) {
+
+    .quantity {
+        justify-content: start;
+        /*貼頭*/
+    }
+}
+
 
 /*客製選擇區-Step2*/
 
@@ -216,8 +235,8 @@ h3 span {
     flex-wrap: wrap;
     /*寬度不夠就換行*/
     /* margin-top: 40px; */
-    justify-content: flex-start
-        /* justify-content: space-between; */
+    justify-content: flex-start;
+    /* justify-content: space-between; */
 
 }
 
@@ -230,9 +249,7 @@ h3 span {
     margin-right: 10px;
 }
 
-.choco_item:last-child {
-    margin-right: 0;
-}
+
 
 .choco_item figure,
 .choco_item figure img {
@@ -247,7 +264,7 @@ h3 span {
     line-height: 24px;
     letter-spacing: 0.2em;
     color: #613134;
-    
+
     display: block;
     text-align: center;
 
@@ -294,6 +311,25 @@ h3 span {
     top: 30px;
     right: 19px;
 }
+
+@media (max-width:820px) {
+
+    .choho_list {
+        justify-content: space-between;
+        /* justify-content: space-between; */
+    }
+}
+
+@media (max-width:576px) {
+
+    .choho_list {
+        justify-content: center;
+        /* justify-content: space-between; */
+    }
+}
+
+
+
 
 
 /*客製選擇區-Step3*/
@@ -371,6 +407,25 @@ h3 span {
     border: #613134 4px dashed;
     padding: 10px;
 }
+
+@media (max-width:820px) {
+
+    .box_item {
+    width: 200px;
+}
+}
+
+
+@media (max-width:576px) {
+
+    .box_list{
+        justify-content: center;
+    }
+    .box_item {
+        width: 250px;
+    }
+}
+
 
 
 

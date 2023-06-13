@@ -1,73 +1,90 @@
 main {
-    /* margin-top: 60px; */
+  /* margin-top: 60px; */
 
-    display: flex; 
-    flex-direction: column; /*垂直排*/
-    align-items: center; /*副軸(水平)置中*/
+  display: flex;
+  flex-direction: column;
+  /*垂直排*/
+  align-items: center;
+  /*副軸(水平)置中*/
 
-    font-family: 'Noto Sans TC', sans-serif;
-  }
-  
-  #banner #news {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #banner{
-    background-image: url(../images/news/banner_big.png);
-    background-size: cover;
-    background-position: center;
-
-    /*object-fit: cover; 會覆蓋且自動置中*/
-    width: 100%;
-    height: 220px;
-  }
-  
-  #news .title {
-    color: #613134;
-    font-size: 24px;
-    line-height: 38px;
-    letter-spacing: 0.2em;
-
-    text-align: center;
-    margin: 100px;
-  }
-
-  .title::after{
-    content: ""; /*必寫，content 就算沒內容也一定要寫*/
-    display: block;
-    width: 20%;
-    height: 1px;
-    background-color: #613134;
-    margin: auto; /*水平置中*/
-  }
-
-  .list_item{
-    display: flex; /* 使用 flexbox 佈局 */
-    justify-content: center; /* 水平置中 */
-    /* height: 100vh; 設置高度為視窗高度 */
-    margin: 44px 0;
-  }
-
-  
-
-  .list_item_a{
-    display: flex; /*a裡的figure跟兩個div可以水平排，因為只有控制a的子元素，所以div class="text"裡的一樣會垂直排*/
-    align-items: center; /*子元素垂直置中*/
-    
-    width: 70%;
-    height: 200px; /*每個a固定最高就是200px*/
-
-    border-top: #9D9D9D 1px solid;
-    padding-top: 44px;
-    text-decoration: none; 
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
-.list_item_end{
+#banner #news {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#banner {
+  background-image: url(../images/news/banner_big.png);
+  background-size: cover;
+  background-position: center;
+
+  /*object-fit: cover; 會覆蓋且自動置中*/
+  width: 100%;
+  height: 220px;
+}
+
+#news .title {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2em;
+  color: #613134;
+
+  text-align: center;
+  margin: 100px;
+
+}
+
+#news .title::after {
+  content: "";
+  /*必寫，content 就算沒內容也一定要寫*/
+  display: block;
+  width: 20%;
+  min-width: 200px;
+  height: 1px;
+  background-color: #613134;
+  margin: auto;
+  /*水平置中*/
+
+  margin-top: 13px;
+}
+
+.list_item {
+  display: flex;
+  /* 使用 flexbox 佈局 */
+  justify-content: center;
+  /* 水平置中 */
+  /* height: 100vh; 設置高度為視窗高度 */
+  margin: 44px 0;
+}
+
+
+
+.list_item_a {
+  display: flex;
+  /*a裡的figure跟兩個div可以水平排，因為只有控制a的子元素，所以div class="text"裡的一樣會垂直排*/
+  align-items: center;
+  /*子元素垂直置中*/
+
+  width: 70%;
+  height: 200px;
+  /*每個a固定最高就是200px*/
+
+  border-top: #9D9D9D 1px solid;
+  padding-top: 44px;
+  text-decoration: none;
+}
+
+.list_item_end {
   /*最後一個要另外加上下底線*/
-  height: 244px;/*加上要給下方的距離，所以高度重設*/
+  height: 244px;
+  /*加上要給下方的距離，所以高度重設*/
   border-bottom: #9D9D9D 1px solid;
   padding: 44px 0px 44px 0;
 }
@@ -75,89 +92,145 @@ main {
 
 /*消息裡的圖片區*/
 
-figure{
-    width: 300px;
-    height: 200px;
-    flex-shrink: 0; /*暫時固定Size*/
-    margin-right: 40px;
-}
-
-figure img{
-    object-fit: cover; /*會覆蓋且自動置中*/
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;/*圓角*/
-    overflow:hidden; /*溢出時，內容自動隱藏，這樣圓角才會出來*/
-
-}
-
-.text{
+figure {
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  /*暫時固定Size*/
   margin-right: 40px;
 }
 
-.text time{
-    color: #C39681;
-    font-family: 'GFS Didot', serif;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.2em;
+figure img {
+  object-fit: cover;
+  /*會覆蓋且自動置中*/
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  /*圓角*/
+  overflow: hidden;
+  /*溢出時，內容自動隱藏，這樣圓角才會出來*/
+
 }
 
-.text h2{
-    color: #613134;
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 0.2em;
+.text {
+  margin-right: 40px;
+}
 
-    font-weight: 500;
+.text time {
+  color: #C39681;
+  font-family: 'GFS Didot', serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+}
 
-    overflow: hidden;/*超出區塊就省略*/
-    text-overflow: ellipsis;/*出現...省略號*/
-    display: -webkit-box; /*還沒正式被支援的，就會先打-webkit-*/
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;/*顯示四行多的省略*/
+.text h2 {
+  color: #613134;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.2em;
+
+  font-weight: 500;
+
+  overflow: hidden;
+  /*超出區塊就省略*/
+  text-overflow: ellipsis;
+  /*出現...省略號*/
+  display: -webkit-box;
+  /*還沒正式被支援的，就會先打-webkit-*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /*顯示四行多的省略*/
 
 }
 
 .text p {
-    overflow: hidden;/*超出區塊就省略*/
-    text-overflow: ellipsis;/*出現...省略號*/
-    display: -webkit-box; /*還沒正式被支援的，就會先打-webkit-*/
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;/*顯示四行多的省略*/
+  overflow: hidden;
+  /*超出區塊就省略*/
+  text-overflow: ellipsis;
+  /*出現...省略號*/
+  display: -webkit-box;
+  /*還沒正式被支援的，就會先打-webkit-*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  /*顯示四行多的省略*/
 
-    color: #000000;
-    font-size: 16px;
-    line-height: 32px;
-    letter-spacing: 0.1em;
+  color: #000000;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
 }
 
 /*右邊箭頭區*/
 
 .more {
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   width: 80%;
+  min-width: 61px;
   height: 1px;
   /* margin-left: 80px; */
 }
 
 .line_1,
-.line_2{
-  
+.line_2 {
+
   height: 1px;
-  background: #613134 ;
+  background: #613134;
 }
 
-.line_1{
+.line_1 {
   width: 90%;
 }
 
-.line_2{
+.line_2 {
   width: 30%;
-  transform-origin:top left;
+  transform-origin: top left;
   transform: rotate(145deg);
 }
 
+@media (max-width:820px) {
 
-  
+  /* 圖縮小 */
+  figure {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+
+@media (max-width:576px) {
+  figure {
+    /* width: 300px; */
+    width: 80%;
+    height: 200px;
+    margin-right: 0;
+  }
+
+  /* 垂直排 */
+
+  .list_item_a {
+    flex-direction: column;
+    height: 466px;
+  }
+
+  /* 調高度，讓線可以正常 */
+  .text {
+    margin: 20px 10px;
+  }
+
+  .list_item_end {
+    /*最後一個要另外加上下底線*/
+    height: 514px;
+    /*加上要給下方的距離，所以高度重設*/
+    border-bottom: #9D9D9D 1px solid;
+    padding: 44px 0px 44px 0;
+  }
+
+  /* 不要箭頭 */
+
+  .more {
+    display: none;
+  }
+
+}
