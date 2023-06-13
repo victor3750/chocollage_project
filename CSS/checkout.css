@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     height: fit-content;
-    background-image: url('../images/confirm/banner_test2.png') ;
+    background-image: url('../images/confirm/banner_test2.png');
     background-size: cover;
 }
 
@@ -166,7 +166,8 @@ small {
 }
 
 /* 讓收件人資訊區所有input開頭對齊 */
-form label, #credit_card_input label {
+form label,
+#credit_card_input label {
     width: 6.5rem;
 }
 
@@ -197,6 +198,7 @@ form label, #credit_card_input label {
 #carrier {
     width: 12rem;
 }
+
 /* 信用卡號區 */
 #credit_card_number {
     width: 75px;
@@ -207,6 +209,7 @@ form label, #credit_card_input label {
 #carrier_number {
     display: none;
 }
+
 /* 修改自動輸入預設背景顏色(目前直接將autofill關閉，所以先註解用不到) */
 /* input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -216,15 +219,7 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0) inset;
     transition: background-color 5000s ease-in-out 0s;
 } */
-@media (max-width:820px) {
-    .tittle_confirm {
-        padding-top: 60px;
-    }
-    .con_info  {
-        min-width: 400px;
-        max-width: 600px;
-    }
-}
+
 /* 按鈕 */
 .step_button {
     width: 65%;
@@ -246,4 +241,77 @@ input:-webkit-autofill:active  {
     background: #613134;
     border-radius: 10px;
     padding: 6px 36px;
+}
+
+@media (max-width:820px) {
+    .tittle_confirm {
+        padding-top: 60px;
+    }
+
+    .con_info {
+        min-width: 400px;
+        max-width: 600px;
+    }
+
+    form div {
+        flex-direction: column;
+    }
+
+    .address_section div {
+        flex-direction: row;
+    }
+
+    form input,
+    form label,
+    form select {
+        display: block;
+        margin: 5px 10px;
+    }
+
+    form {
+        margin-bottom: 15px;
+    }
+    .step_button {
+        min-width: 400px;
+        max-width: 600px;
+    }
+}
+@media (max-width:576px) {
+    .con_info {
+        min-width: 350px;
+        width: 90%;
+    }
+    h3 {
+        width: 100%;
+    }
+    #name,
+    #phone,
+    #invoice,
+    #carrier {
+        width: 10rem;
+    }
+    #email, #address {
+        width: calc(100% - 20px);
+    }
+    input, select {
+        font-size: 14px;
+    }
+    #county_box, #district_box, #zipcode_box {
+        padding: 0 8px;
+    }
+    #district_box {
+        margin: 5px;
+    }
+    #county_box {
+        width: 6.5rem;
+        margin-right: 5px;
+    }
+    #zipcode_box {
+        width: 5rem;
+        margin-left: 5px;
+    }
+    .step_button {
+        min-width: 350px;
+        width: 90%;
+    }
 }
