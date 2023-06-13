@@ -200,6 +200,10 @@ form label,
 }
 
 /* 信用卡號區 */
+.credit_card_inner {
+    display: flex;
+}
+
 #credit_card_number {
     width: 75px;
     margin-right: 0;
@@ -253,6 +257,10 @@ input:-webkit-autofill:active  {
         max-width: 600px;
     }
 
+    .credit_card_inner {
+        flex-direction: column;
+    }
+
     form div {
         flex-direction: column;
     }
@@ -271,47 +279,82 @@ input:-webkit-autofill:active  {
     form {
         margin-bottom: 15px;
     }
+
     .step_button {
         min-width: 400px;
         max-width: 600px;
     }
 }
+
 @media (max-width:576px) {
     .con_info {
         min-width: 350px;
         width: 90%;
     }
+
     h3 {
+        font-size: 14px;
         width: 100%;
     }
+
+    .credit_card_inner {
+        flex-direction: column;
+    }
+
+    .credit_card_inner label {
+        margin-top: 0;
+    }
+
+    #credit_card_number {
+        margin-top: 0;
+        height: 30px;
+        line-height: 30px;
+    }
+
     #name,
     #phone,
     #invoice,
     #carrier {
         width: 10rem;
     }
-    #email, #address {
+
+    #email,
+    #address {
         width: calc(100% - 20px);
     }
-    input, select {
+
+    input,
+    select {
         font-size: 14px;
     }
-    #county_box, #district_box, #zipcode_box {
+
+    #county_box,
+    #district_box,
+    #zipcode_box {
         padding: 0 8px;
     }
+
     #district_box {
         margin: 5px;
     }
+
     #county_box {
         width: 6.5rem;
         margin-right: 5px;
     }
+
     #zipcode_box {
         width: 5rem;
         margin-left: 5px;
     }
+
     .step_button {
         min-width: 350px;
         width: 90%;
+    }
+
+    #nextStep {
+        font-size: 16px;
+        padding: 6px 24px;
     }
 }
