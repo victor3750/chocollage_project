@@ -28,20 +28,20 @@ main {
 }
 
 /*內容區*/
-#edit{
+#edit {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
 }
 
-#edit form{
+#edit form {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#edit h2{
+#edit h2 {
     width: 210px;
     display: block;
     text-decoration: none;
@@ -91,7 +91,7 @@ form input[type=email] {
     border: 1px solid #613134;
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
-    
+
     color: #613134;
 
     padding: 9px 0 9px 16px;
@@ -99,7 +99,7 @@ form input[type=email] {
 
 #county_box,
 #district_box,
-#zipcode_box{
+#zipcode_box {
     width: 150px;
     height: 50px;
     border-radius: 10px;
@@ -136,8 +136,37 @@ select {
     color: #613134;
 }
 
-#address{
+#address {
     width: 487px;
+}
+
+
+@media (max-width:576px) {
+
+    #edit form {
+        margin-left: 15px;
+    }
+
+    form input[type=text],
+    form input[type=password],
+    form input[type=email] {
+        width: 450px;
+    }
+
+    #county_box,
+    #district_box,
+    #zipcode_box {
+        /* width: 180px; */
+        margin: 5px 20px 20px 0;
+    }
+
+    #zipcode_box{
+        width: 100px;
+    }
+
+    #address {
+        width: 450px;
+    }
 }
 
 
