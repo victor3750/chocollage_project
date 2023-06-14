@@ -49,7 +49,7 @@
     width: 65%;
     min-width: 600px;
     max-width: 1050px;
-    min-height: 1000px;
+    min-height: 900px;
     margin: 0 auto;
 }
 
@@ -231,10 +231,11 @@ input:-webkit-autofill:active  {
     max-width: 1050px;
     margin: 60px auto 0 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-bottom: 100px;
 }
 
+#back,
 #nextStep {
     display: block;
     font-size: 20px;
@@ -353,6 +354,7 @@ input:-webkit-autofill:active  {
         width: 90%;
     }
 
+    #back,
     #nextStep {
         font-size: 16px;
         padding: 6px 24px;

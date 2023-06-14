@@ -27,21 +27,26 @@
         <nav class="navigation">
             <ul id="menu">
                 <li><a class="menu_option" href="news.html">最新消息</a></li>
-                <li><a class="menu_option" href="#">客製禮盒</a></li>
+                <li><a class="menu_option" href="customization.html">客製禮盒</a></li>
                 <li><a class="menu_option" href="chocolate_desciption.html">巧克力介紹</a></li>
                 <li><a class="menu_option" href="about.html">關於我們</a></li>
             </ul>
             <ul class="icon">
                 <li>
-                    <a class="icon_option" href="#">
+                    <a class="icon_option" href="cart.html">
                         <img src="images/index/購物車.svg" alt="購物車">
                     </a>
                 </li>
-                <li>
-                    <a class="icon_option" href="#">
+                <li class="member">
+                    <a class="icon_option" href="sign_in.html">
                         <img src="images/index/會員.svg" alt="會員">
                     </a>
                 </li>
+                <div class="member_list">
+                    <li class="member_op"><a class="menu_option" href="sign_in.html">會員登入/註冊</a></li>
+                    <li class="member_op"><a class="menu_option" href="edit.html">聯絡資料修改</a></li>
+                    <li class="member_op"><a class="menu_option" href="ordersearch.html">會員訂單查詢</a></li>
+                </div>
             </ul>
         </nav>
         <button class="hamburger">
@@ -80,7 +85,7 @@
                                 <a class="qtyplus" field="quantity" href=""><img src="images/cart/plus.svg" alt=""></a>
                             </td>
                             <td data-title="品項名稱" class="item">
-                                經典緞帶-四入禮盒<button class="expand"><img src="images/cart/expand.svg" alt="展開"></button><br>
+                                經典綁帶1-四入禮盒<button class="expand"><img src="images/cart/expand.svg" alt="展開"></button><br>
                                 <div class="contents-row_1 contents">
                                     <ul>
                                         <li>蔓越莓巧克力 x 2</li>
@@ -92,7 +97,7 @@
                             <td data-title="暖心小卡" class="w_card">
                                 <form name="message_form" id="message_form" action="" method="post">
                                     <textarea name="message" maxlength="150" id="message"
-                                        placeholder="祝你生日快樂！希望你的生日充滿歡樂和美好的回憶。祝你生日快樂！希望你的生日充滿歡樂和美好的回憶祝你生日快樂！希望你的生日充滿歡樂和美好的回憶祝你生日快樂！希望你的生日充滿歡樂和美好的回憶祝你生日快樂！希望你的生日充滿歡樂和美好的回憶" readonly></textarea>
+                                        placeholder="祝你生日快樂！希望你的生日充滿歡樂和美好的回憶。愛是一個獨特的存在，讓我們一起翱翔在生命的旅程中，享受生命的美好，讓每個人都能夠擁有自己的愛。" readonly></textarea>
                                 </form>
                             </td>
                             <td data-title="金額" class="price">$0</td>
@@ -113,7 +118,7 @@
                                 <a class="qtyplus" field="quantity" href=""><img src="images/cart/plus.svg" alt=""></a>
                             </td>
                             <td data-title="品項名稱" class="item">
-                                經典緞帶-八入禮盒<button class="expand"><img src="images/cart/expand.svg" alt="展開"></button><br>
+                                經典綁帶1-八入禮盒<button class="expand"><img src="images/cart/expand.svg" alt="展開"></button><br>
                                 <div class="contents-row_2 contents">
                                     <ul>
                                         <li>黑巧克力 x 2</li>
@@ -146,11 +151,11 @@
                 <h2>商品金額：　<span>$0</span></h2>
             </div>
             <div class="step_button">
-                <a href="" id="contShopping">繼續選購</a>
+                <a href="customization.html" id="contShopping">繼續選購</a>
                 <a href="checkout.html" id="checkout">去結帳</a>
             </div>
             <div class="step_button2">
-                <a href="" id="shoppingNow">立即選購</a>
+                <a href="customization.html" id="shoppingNow">立即選購</a>
             </div>
         </section>
         <div class="mask">
@@ -169,18 +174,18 @@
             <ul id="menu_footer">
                 <!-- <li><a class="menu_option_f" href="index(ch).html">首頁</a></li> -->
                 <li><a class="menu_option_f" href="news.html">最新消息</a></li>
-                <li><a class="menu_option_f" href="">客製禮盒</a></li>
-                <li><a class="menu_option_f" href="">巧克力介紹</a></li>
+                <li><a class="menu_option_f" href="customization.html">客製禮盒</a></li>
+                <li><a class="menu_option_f" href="chocolate_desciption.html">巧克力介紹</a></li>
                 <!-- <li><a class="menu_option_f" href="">全部商品</a></li> -->
                 <!-- <li><a class="menu_option_f" href="">沁心晨曦</a></li>
                 <li><a class="menu_option_f" href="">成熟風韻</a></li>
                 <li><a class="menu_option_f" href="">莓果盛宴</a></li>
                 <li><a class="menu_option_f" href="">輕鬆一刻</a></li> -->
-                <li><a class="menu_option_f" href="">關於我們</a></li>
+                <li><a class="menu_option_f" href="about.html">關於我們</a></li>
                 <!-- <li><a class="menu_option_f" href="">營業時間</a></li>
                 <li><a class="menu_option_f" href="">營業據點</a></li> -->
-                <li><a class="menu_option_f" href="">會員</a></li>
-                <li><a class="menu_option_f" href="">訂單查詢</a></li>
+                <li><a class="menu_option_f" href="sign_in.html">會員</a></li>
+                <li><a class="menu_option_f" href="ordersearch.html">訂單查詢</a></li>
                 <!-- <li><a class="menu_option_f" href="">修改會員資訊</a></li> -->
             </ul>
         </div>
