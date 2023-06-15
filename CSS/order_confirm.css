@@ -2,7 +2,7 @@
 
 /* 共用表單格式 */
 #item_list {
-    max-width: 1050px;
+    width: 100%;
     margin: 0 auto;
     border-collapse: separate;
     /* 設置表格邊框和單元格分開 */
@@ -21,7 +21,7 @@
 th,
 td {
     font-size: 16px;
-    line-height: 50px;
+    line-height: 40px;
     letter-spacing: 0.2em;
     text-align: left;
 }
@@ -44,7 +44,7 @@ td {
     position: relative;
     width: 100%;
     height: fit-content;
-    background-image: url('../images/confirm/banner_test2.png') ;
+    background-image: url('../images/confirm/banner_test2.png');
     background-size: cover;
 }
 
@@ -85,7 +85,8 @@ td {
 /* 訂單確認 */
 .list_confirm {
     margin: 0 auto;
-    width: 1050px;
+    max-width: 1050px;
+    width: 85%;
 }
 
 th,
@@ -94,24 +95,51 @@ td {
 }
 
 #item_list tr {
-    width: 1050px;
+    width: 100%;
+}
+
+.img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+}
+
+#text img {
+    width: 100%;
+}
+
+#text span {
+    display: inline-block;
+    height: 100px;
+    font-size: 16px;
+    line-height: 100px;
+    vertical-align: top;
+    margin-left: 1rem;
+}
+
+#text td {
+    line-height: 100px;
+    height: 100px;
+    margin-bottom: 2rem;
 }
 
 #text th:nth-child(1),
 #text td:nth-child(1) {
     text-align: start;
-    width: 45%;
+    width: 60%;
     padding-left: 14px;
 }
 
 #text th:nth-child(2),
 #text td:nth-child(2) {
-    width: 40%;
+    width: 20%;
 }
 
 #text th:nth-child(3),
 #text td:nth-child(3) {
-    width: 15%;
+    width: 20%;
     padding-right: 14px;
 }
 
@@ -130,10 +158,6 @@ td {
     justify-content: space-between;
 }
 
-.img {
-    width: 200px;
-    height: 200px;
-}
 
 #info_card img {
     width: 100%;
@@ -169,11 +193,38 @@ p {
     font-weight: 400;
 }
 
+@media (max-width: 576px) {
+    #content h1 {
+        margin: 0 auto 40px auto;
+    }
+    #text span {
+        display: block;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 0;
+    }
 
-/* 每項商品底部分隔線 */
+    .img {
+        display: block;
+        width: 80px;
+        height: 80px;
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    #text td {
+        display: block;
+        font-size: 14px;
+        line-height: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 商品列表與總價格分隔線 */
 #line {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 1rem;
 }
 
 #line hr {
@@ -184,7 +235,8 @@ p {
 
 /* 商品總額 */
 .total {
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -192,14 +244,15 @@ p {
 }
 
 .total h2 {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 32px;
     letter-spacing: 0.2em;
     color: #613134;
     margin-bottom: 8px;
+
 }
 
-span {
+.total span {
     display: inline-block;
     width: 105px;
     text-align: end;
@@ -207,18 +260,18 @@ span {
 
 /* 付款及收件資訊 */
 .pay_dely {
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
 .pay_dely h2 {
     padding: 0 12px;
-    height: 50px;
+    height: 40px;
     background: #C39681;
     border-radius: 10px;
-    font-weight: 500;
     font-size: 16px;
-    line-height: 50px;
+    line-height: 40px;
     letter-spacing: 0.2em;
     color: #FFFFFF;
     margin: 0 0 25px 0;
@@ -231,7 +284,6 @@ span {
 
 #PD_items h3,
 h4 {
-    height: 32px;
     font-size: 16px;
     line-height: 32px;
     letter-spacing: 0.2em;
@@ -249,9 +301,26 @@ h4 {
     font-weight: 400;
 }
 
+@media (max-width: 576px) {
+    #PD_items h3,
+    h4 {
+        letter-spacing: 0.1em;
+        font-size: 14px;
+    }
+    #PD_items h3 {
+        width: 115px;
+        padding-left: 14px;
+    }
+    .pay_dely h2 {
+        margin-top: 1rem;
+    }
+    
+}
+
 /* 按鈕 */
 .step_button {
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     margin: 60px auto 0 auto;
     display: flex;
     justify-content: space-between;
@@ -270,7 +339,19 @@ h4 {
     border-radius: 10px;
     padding: 6px 36px;
 }
-
+@media (max-width: 576px) {
+    #back,
+#send_order{
+    font-size: 16px;
+    padding: 6px 24px;
+}
+.step_button {
+    margin: 40px auto 0 auto;
+}
+.total h2 {
+    margin-bottom: 4px;
+}
+}
 /* 遮罩、彈出視窗 */
 .mask {
     display: none;
@@ -286,22 +367,25 @@ h4 {
 
 .completed {
     position: sticky;
-    top: calc(50% - 400px/2);
+    top: calc(50vh - 400px/2);
     left: calc(50% - 600px/2);
     width: 600px;
     height: 400px;
     background-color: #FFFFFF;
     border-radius: 10px;
 }
-.completed > * {
+
+.completed>* {
     width: 315px;
     margin: 0 auto;
     text-align: center;
 }
+
 .check_icon {
     padding-top: 75px;
     margin-bottom: 26px;
 }
+
 .completed h1 {
     font-size: 20px;
     line-height: 32px;

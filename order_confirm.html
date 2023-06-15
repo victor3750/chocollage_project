@@ -57,7 +57,8 @@
     </header>
     <main>
         <section id="banner">
-            <lottie-player src="https://lottie.host/00c29677-7d2d-484e-91f7-c257a77ef05d/fHEiTsdLlZ.json" background="transparent" speed="0.5" style="width: 100%; height: 100%;" autoplay></lottie-player>
+            <lottie-player src="https://lottie.host/00c29677-7d2d-484e-91f7-c257a77ef05d/fHEiTsdLlZ.json"
+                background="transparent" speed="0.5" style="width: 100%; height: 100%;" autoplay></lottie-player>
         </section>
         <section id="content">
             <div class="tittle_confirm">
@@ -67,23 +68,35 @@
                 <table id="item_list">
                     <thead>
                         <tr id="text">
-                            <th>品項名稱</th>
-                            <th>數量</th>
-                            <th>金額</th>
+                            <th class="col">品項名稱</th>
+                            <th class="col">數量</th>
+                            <th class="col">金額</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr id="text">
-                            <td>經典緞帶-六入禮盒</td>
+                            <td>
+                                <div class="img">
+                                    <img src="images/customization/box_1.png" alt="">
+                                </div>
+                                <span>經典綁帶1-六入禮盒</span>
+                            </td>
                             <td class="quan">1盒</td>
                             <td>$360</td>
                         </tr>
-                        <tr id="info_card">
+                        <tr id="text">
+                            <td>
+                                <div class="img">
+                                    <img src="images/customization/box_2.png" alt="">
+                                </div>
+                                <span>經典綁帶2-八入禮盒</span>
+                            </td>
+                            <td class="quan">1盒</td>
+                            <td>$480</td>
+                        </tr>
+                        <!-- <tr id="info_card">
                             <td colspan="3">
                                 <div class="img_info">
-                                    <div class="img">
-                                        <img src="images/order_confirm/item.png" alt="">
-                                    </div>
                                     <div class="item_info">
                                         <h3 class="chocolate">巧克力</h3>
                                         <table id="items">
@@ -111,7 +124,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td id="line" colspan="3">
                                 <hr>
@@ -121,37 +134,37 @@
                 </table>
             </div>
             <div class="total">
-                <h2>商品金額：　<span>$360</span></h2>
+                <h2>商品金額：　<span>$840</span></h2>
                 <h2>運費：　<span>$80</span></h2>
-                <h2>應付金額：　<span>$440</span></h2>
+                <h2>應付金額：　<span>$920</span></h2>
             </div>
             <div class="pay_dely">
                 <h2>付款及收件資訊</h2>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="pay">
                     <h3>付款方式：</h3>
                     <h4>貨到付款</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="pick">
                     <h3>取貨方式：</h3>
                     <h4>宅配到府(運費$80)</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="name">
                     <h3>收件人姓名：</h3>
                     <h4>林茗茗</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="tel">
                     <h3>聯絡電話：</h3>
                     <h4>02-1234-5678</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="email">
                     <h3>Email：</h3>
                     <h4>a1234bc@gmail.com</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="address">
                     <h3>收件地址：</h3>
                     <h4>台北市中正區濟南路一百段999號</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="invoice">
                     <h3>發票種類：</h3>
                     <h4>隨商品附上紙本發票</h4>
                 </div>
@@ -170,7 +183,7 @@
                 <p>商品將在下單後2~4個工作天（不含例假日）出貨 </p>
                 <div class="step_button_comp">
                     <a href="index(ch).html" id="to_index">回首頁</a>
-                    <a href="" id="order_track">訂單查詢</a>
+                    <a href="ordersearch.html" id="order_track">訂單查詢</a>
                 </div>
             </div>
         </div>
