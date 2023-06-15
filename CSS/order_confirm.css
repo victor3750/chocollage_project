@@ -21,7 +21,7 @@
 th,
 td {
     font-size: 16px;
-    line-height: 40px;
+    line-height: 38px;
     letter-spacing: 0.2em;
     text-align: left;
 }
@@ -128,18 +128,18 @@ td {
 #text th:nth-child(1),
 #text td:nth-child(1) {
     text-align: start;
-    width: 60%;
+    width: 66%;
     padding-left: 14px;
 }
 
 #text th:nth-child(2),
 #text td:nth-child(2) {
-    width: 20%;
+    width: 17%;
 }
 
 #text th:nth-child(3),
 #text td:nth-child(3) {
-    width: 20%;
+    width: 17%;
     padding-right: 14px;
 }
 
@@ -267,11 +267,11 @@ p {
 
 .pay_dely h2 {
     padding: 0 12px;
-    height: 40px;
+    height: 38px;
     background: #C39681;
     border-radius: 10px;
     font-size: 16px;
-    line-height: 40px;
+    line-height: 38px;
     letter-spacing: 0.2em;
     color: #FFFFFF;
     margin: 0 0 25px 0;

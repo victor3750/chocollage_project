@@ -2,7 +2,7 @@
 
 /* 共用表單格式 */
 table {
-    width: 1050px;
+    width: 100%;
     margin: 0 auto;
     border-collapse: separate;
     /* 設置表格邊框和單元格分開 */
@@ -28,21 +28,21 @@ td {
 }
 
 tr {
-    height: 50px;
+    height: 38px;
 }
 
 th {
     padding-left: 32px;
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 16px;
+    line-height: 38px;
     letter-spacing: 0.2em;
     color: #FFFFFF;
 }
 
 td {
     padding-left: 32px;
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 16px;
+    line-height: 38px;
     letter-spacing: 0.2em;
     color: #613134;
 }
@@ -54,7 +54,7 @@ td {
     position: relative;
     width: 100%;
     height: fit-content;
-    background-image: url('../images/confirm/banner_test2.png') ;
+    background-image: url('../images/confirm/banner_test2.png');
     background-size: cover;
 }
 
@@ -70,7 +70,7 @@ td {
 #content {
     position: relative;
     width: 100%;
-    min-height: 140vh;
+    min-height: 800px;
     background: url(../images/confirm/bg_confirm.png);
     background-size: cover;
 }
@@ -92,30 +92,41 @@ td {
     color: #613134;
 }
 
+#item_thead th:nth-child(1) {
+width: 50%;
+}
+
+#item_thead th:nth-child(2),
+#item_thead th:nth-child(3) {
+width: 25%;
+}
+
+
 /* 確認清單＆暖心小卡 */
 .list_confirm {
     margin: 0 auto;
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     padding-bottom: 60px;
     border-bottom: 1px solid #613134;
 }
 
 form {
     padding-top: 40px;
-    width: 1050px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
 textarea {
     padding: 10px 20px;
-    width: 900px;
+    width: 90%;
     height: 250px;
     border: 1px solid #613134;
     border-radius: 10px;
     resize: none;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 32px;
     letter-spacing: 0.2em;
     color: #613134;
@@ -128,7 +139,8 @@ textarea:focus {
 
 /* 按鈕 */
 .step_button {
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     margin: 60px auto 0 auto;
     padding-bottom: 60px;
     display: flex;
@@ -146,4 +158,13 @@ textarea:focus {
     background: #613134;
     border-radius: 10px;
     padding: 6px 36px;
+}
+
+@media (max-width: 576px) {
+
+    #back,
+    #toCart {
+        font-size: 16px;
+        padding: 6px 24px;
+    }
 }

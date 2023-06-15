@@ -212,7 +212,7 @@
 .flavor_item:hover .item_name {
     opacity: 1;
 }
-.fla_tittle::after {
+.fla_title::after {
     content: '';
     display: block;
     width: 0%;
@@ -221,7 +221,7 @@
     background-color: #fff;
     transition: width 0.5s 0.3s;
 }
-.flavor_item:hover .fla_tittle::after {
+.flavor_item:hover .fla_title::after {
     width: 80%;
 }
 

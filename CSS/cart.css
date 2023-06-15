@@ -2,7 +2,7 @@
 
 /* 共用表單格式 */
 table {
-    width: 1050px;
+    width: 100%;
     margin: 0 auto;
     border-collapse: separate;
     /* 設置表格邊框和單元格分開 */
@@ -22,13 +22,13 @@ th:nth-last-child(1) {
 th,
 td {
     font-size: 16px;
-    line-height: 40px;
+    line-height: 38px;
     letter-spacing: 0.2em;
     text-align: left;
 }
 
 tr {
-    height: 40px;
+    height: 38px;
 }
 
 #separate {
@@ -91,7 +91,8 @@ td {
 /* 購物車 */
 .list_confirm {
     margin: 0 auto;
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
 }
 
 #item_list button {
@@ -102,7 +103,7 @@ td {
 th:nth-child(1),
 td:nth-child(1) {
     text-align: center;
-    width: 250px;
+    width: 200px;
 }
 
 th:nth-last-child(2) {
@@ -148,7 +149,7 @@ td:last-child {
 /* 暖心小卡 */
 form {
     padding-top: 10px;
-    width: 300px;
+    width: 80%;
     margin: 0;
     text-align: center;
 }
@@ -318,7 +319,8 @@ tr {
 
 /* 商品總額 */
 .total {
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
@@ -350,7 +352,8 @@ tr {
 
 /* 按鈕 */
 .step_button {
-    width: 1050px;
+    width: 85%;
+    max-width: 1050px;
     margin: 60px auto 0 auto;
     display: flex;
     justify-content: space-between;
