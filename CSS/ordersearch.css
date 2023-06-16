@@ -6,23 +6,69 @@
 
 /*section 共用*/
 section {
-	display: flex;
-	flex-direction: column;
-	/* 設定主軸為垂直 */
-	justify-content: center;
-	/* 設定主軸(垂直)置中 */
-	align-items: center;
-	/* 設定幅軸(水平)置中 */
+    display: flex;
+    flex-direction: column;
+    /* 設定主軸為垂直 */
+    justify-content: center;
+    /* 設定主軸(垂直)置中 */
+    align-items: center;
+    /* 設定幅軸(水平)置中 */
 }
+
 /*h1 中文大標題樣式*/
-h1{   
+/* h1 {
     font-family: 'Noto Sans TC';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 0.2em;
+} */
+
+.pg_title {
+    width: 100%;
 }
+
+.pg_title .title {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    color: #613134;
+
+    text-align: center;
+    margin: 100px;
+
+    position: relative;
+}
+
+.pg_title .title::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #613134;
+
+    animation: expand 0.35s linear forwards;
+}
+
+@keyframes expand {
+
+    /* title下的線的動畫 */
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
 /*主要內容區*/
 /*Banner 區*/
 .banner {
@@ -39,70 +85,102 @@ h1{
     object-fit: cover;
     bottom: 0;
 }
+
 /*標題*/
-#form{
+#form {
     margin-bottom: 300px;
 }
-.searchtitle{
+
+.searchtitle {
     color: #613134;
     margin: 100px;
     padding-top: 11px;
-	padding-bottom: 11px;
+    padding-bottom: 11px;
     padding-left: 140px;
     padding-right: 140px;
-	border-bottom: 1px solid #613134;
+    border-bottom: 1px solid #613134;
 }
-.order th{
+
+/* 縮放test part1 OK*/
+#form .order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order {
+    width: 100%;
+}
+
+.order table {
+    width: 70%;
+    min-width: 790px;
+    max-width: 1000px;
+}
+
+/* part1 end */
+
+
+.order th {
     background-color: #C39681;
     font-family: 'Noto Sans TC';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 38px;
     letter-spacing: 0.2em;
     color: white;
-    padding-right:194px;
+    padding-right: 194px;
     margin: 9px 14px;
 }
+
 .order thead th:first-child {
     border-radius: 10px 0 0 10px;
-    padding-left:14px;
+    padding-left: 14px;
 }
+
 .order thead th:last-child {
     border-radius: 0 10px 10px 0;
-    padding-right:14px;
+    padding-right: 14px;
 }
-.order td{
+
+.order td {
     font-family: 'Noto Sans TC';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 32px;
     letter-spacing: 0.2em;
-    color:#613134;
+    color: #613134;
     padding-top: 14px;
 }
-.order table tbody td:first-child{
-    padding-left:14px;
+
+.order table tbody td:first-child {
+    padding-left: 14px;
 }
+
 /*展開表格*/
 .expand {
     cursor: pointer;
     border: none;
     background-color: white;
 }
-hr{
+
+hr {
     border: .1px solid #613134;
 }
-#ordercontent{
+
+#ordercontent {
     margin-top: 20px;
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
 }
-#ordercontent ul{
+
+#ordercontent ul {
     width: 768px;
 }
-#ordercontent ul li{
-    display:inline;
+
+#ordercontent ul li {
+    display: inline;
     margin-top: 30px;
     font-family: 'Noto Sans TC';
     font-style: normal;
@@ -110,14 +188,219 @@ hr{
     font-size: 16px;
     line-height: 32px;
     letter-spacing: 0.1em;
-    color: #613134; 
+    color: #613134;
     justify-content: space-between;
 }
-.dragform{
+
+.dragform {
     border: 1px solid #613134;
     border-radius: 10px;
     padding: 20px 97px;
 }
+
+.item_list {
+    margin-left: 50px;
+}
+
+/*縮放測試 part2 OK*/
+
+.order th {
+    width: 20%;
+    text-align: left;
+    padding-right: unset;
+}
+
+.order thead th:first-child {
+    width: 22%;
+}
+
+.order thead th:nth-last-child(2) {
+    padding-left: unset;
+    width: 15%;
+}
+
+.order thead th:last-child {
+    padding-left: unset;
+    width: 17%;
+}
+
+#ordercontent {
+    width: 100%;
+}
+
+.dragform {
+    width: 70%;
+    max-width: 895px;
+    min-width: 680px;
+    border: 1px solid #613134;
+    border-radius: 10px;
+    padding: 20px 5% 20px;
+}
+
+#ordercontent ul {
+    width: 100%;
+
+}
+
+.order2 table tbody tr:first-child {
+    width: 22%;
+}
+
+
+#ordercontent .dragform .title_item li {
+    width: 10%;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+
+    margin-top: unset;
+}
+
+#ordercontent .dragform .title_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ordercontent .dragform .title_item li:first-child {
+    width: 35%;
+}
+
+#ordercontent .dragform .title_item li:last-child {
+    width: 20%;
+}
+
+.date_rwd {
+    display: none;
+}
+
+/* part 2 end */
+
+@media (max-width:820px) {
+
+    /* title */
+    .searchtitle {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    /* 大表格 */
+
+    .expand {
+        width: 32px;
+        height: 14px;
+    }
+
+    .expand img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .order table {
+        width: 90%;
+        min-width: unset;
+    }
+
+    .order thead th:first-child {
+        width: 50%;
+    }
+
+    .order thead th:nth-child(2),
+    .order tbody td:nth-child(2) {
+        display: none;
+    }
+
+    .order thead th:nth-child(3) {
+        /* display: none; */
+        width: 22%;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .order thead th:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #C39681;
+    }
+
+    .order tbody td:nth-child(1) {
+        white-space: nowrap;
+    }
+
+    .order tbody td:nth-child(3) {
+        font-size: 16px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .order thead th:last-child {
+        white-space: nowrap;
+        /* 禁止文字換行 */
+        width: 40%;
+    }
+
+    /* 小表格 */
+
+    .dragform {
+        width: 90%;
+        min-width: unset;
+        padding: 20px 5% 0;
+    }
+
+    #ordercontent .dragform .title_item li:first-child {
+        width: 43%;
+    }
+
+    #ordercontent .dragform .title_item li:nth-child(2) {
+        width: 15%;
+    }
+
+    #ordercontent .dragform .title_item li:last-child {
+        width: 25%;
+    }
+
+    .title_item_pro div:last-child {
+        padding-bottom: 20px;
+    }
+
+    .date_rwd {
+        display: block;
+        font-family: 'Noto Sans TC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.1em;
+        color: #613134;
+        text-align: right;
+    }
+}
+
+@media (max-width:576px) {
+    /* 
+    .order thead th{
+        
+    } */
+
+    /* #ordercontent .dragform .title_item li:first-child {
+        width: 30%;
+    } */
+    .item_list {
+        margin-left: 40px;
+    }
+}
+
+
+
+
+
 
 /* 頁尾 */
 footer {
@@ -130,6 +413,7 @@ footer {
     height: 150px;
     background: #E6DEDD;
 }
+
 .tittle_footer {
     display: block;
     line-height: 150px;
@@ -142,10 +426,12 @@ footer {
     color: #000000;
     margin-left: 16px;
 }
+
 footer .menu_f {
     width: 600px;
     height: 150px;
 }
+
 #menu_footer {
     width: 600px;
     height: 96px;

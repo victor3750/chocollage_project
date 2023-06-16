@@ -46,7 +46,7 @@
                 <div class="member_list">
                     <li class="member_op"><a class="menu_option" href="sign_in.html">會員登入/註冊</a></li>
                     <li class="member_op"><a class="menu_option" href="edit.html">聯絡資料修改</a></li>
-                    <li class="member_op"><a class="menu_option" href="ordersearch.html">訂單確認</a></li>
+                    <li class="member_op"><a class="menu_option" href="ordersearch.html">會員訂單查詢</a></li>
                 </div>
             </ul>
         </nav>
@@ -65,9 +65,12 @@
         </section>
 
         <!-- 標題 -->
-        <section id="ordersearch">
+        <!-- <section id="ordersearch">
             <h1 class="searchtitle">訂單查詢</h1>
-        </section>
+        </section> -->
+        <div class="pg_title">
+            <h1 class="title">訂單查詢</h1>
+        </div>
 
         <!-- 大表格 -->
         <section id="form">
@@ -83,7 +86,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>CCL04191034 <button class="expand"><img src="/images/ordersearch/ARROW_expand.png"
+                            <td>CCL04191034<button class="expand"><img src="/images/ordersearch/ARROW_expand.png"
                                         alt="展開"></button></td>
                             <td>2023/04/19</td>
                             <td>已取貨</td>
@@ -96,119 +99,97 @@
             <section id="ordercontent">
                 <div class="dragform">
                     <div>
-                        <ul>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;">品項名稱</li>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;
-                padding: 0 250px;">數量</li>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;">品項金額</li>
+                        <ul class="title_item title_heard">
+                            <li>品項名稱</li>
+                            <!-- <li style="padding: 0 250px;">數量</li> -->
+                            <li>數量</li>
+                            <li>品項金額</li>
                         </ul>
                     </div>
                     <hr>
+
+                    <div class="title_item_pro">
+                        <div>
+                            <ul class="title_item">
+                                <li>經典緞帶-六入禮盒</li>
+                                <!-- <li style="padding-left:142px;">1盒</li>
+                                <li style="padding-left: 256px;">$360</li> -->
+                                <li>1盒</li>
+                                <li>$360</li>
+                            </ul>
+                        </div>
+                        <div class="item_list">
+                            <ul>
+                                <li>黑巧克力</li>
+                                <li>2顆</li>
+                            </ul>
+                        </div>
+                        <div class="item_list">
+                            <ul>
+                                <li>玫瑰巧克力</li>
+                                <li>2顆</li>
+                            </ul>
+                        </div>
+                        <div class="item_list">
+                            <ul>
+                                <li>藍莓巧克力</li>
+                                <li>2顆</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="title_item_pro">
+                        <div>
+                            <ul class="title_item">
+                                <li>經典緞帶-六入禮盒</li>
+                                <!-- <li style="padding-left:142px;">1盒</li>
+                            <li style="padding-left: 256px;">$360</li> -->
+                                <li>1盒</li>
+                                <li>$360</li>
+                            </ul>
+                        </div>
+                        <div class="item_list">
+                            <ul>
+                                <li>蔓越莓巧克力</li>
+                                <li>3顆</li>
+                            </ul>
+                        </div>
+                        <div class="item_list">
+                            <ul>
+                                <li>咖啡巧克力</li>
+                                <li>3顆</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <hr> -->
                     <div>
-                        <ul>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;
-                ">經典緞帶-六入禮盒</li>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;
-                padding-left:142px;">1盒</li>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;
-                padding-left: 256px;">$360</li>
+                        <ul class="date_rwd">
+                            <li>訂單成立日期：</li>
+                            <li>2023/04/19</li>
                         </ul>
                     </div>
-                    <div>
-                        <ul>
-                            <li>黑巧克力</li>
-                            <li>2顆</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>玫瑰巧克力</li>
-                            <li>2顆</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>藍莓巧克力</li>
-                            <li>2顆</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;">經典緞帶-六入禮盒</li>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;
-                padding-left:142px;">1盒</li>
-                            <li style="font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 32px;
-                letter-spacing: 0.2em;
-                color:#613134;
-                padding-left: 256px;">$360</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>蔓越莓巧克力</li>
-                            <li>3顆</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>咖啡巧克力</li>
-                            <li>3顆</li>
-                        </ul>
-                    </div>
+
+
                 </div>
             </section>
+
+            <!-- <div class="order order2">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>CCL06150335<button class="expand"><img src="/images/ordersearch/ARROW_expand.png"
+                                        alt="展開"></button></td>
+                            <td>2023/06/15</td>
+                            <td>已取貨</td>
+                            <td>$720</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+            
 
         </section>
     </main>

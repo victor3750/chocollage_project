@@ -118,6 +118,38 @@ main {
   background-color: #613134;
 }
 
+/* hover長線 */
+
+.check_list>li:not(.active_color):hover ::after {
+  /* li被hover時，跑線段動畫 (但選中的被hover不要跑) */
+  animation: expand 0.35s linear forwards;
+}
+
+@keyframes expand {
+  /* title下的線的動畫 */
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@media (max-width:820px) {
+
+  @keyframes expand {
+    /* title下的線的動畫 */
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 145px;
+    }
+  }
+}
+
+
+
+
 /* banner、按鈕RWD */
 @media (max-width:820px) {
   .banner_text {
