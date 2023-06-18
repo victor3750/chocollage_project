@@ -197,6 +197,7 @@ p {
     #content h1 {
         margin: 0 auto 40px auto;
     }
+
     #text span {
         display: block;
         font-size: 14px;
@@ -302,19 +303,22 @@ h4 {
 }
 
 @media (max-width: 576px) {
+
     #PD_items h3,
     h4 {
         letter-spacing: 0.1em;
         font-size: 14px;
     }
+
     #PD_items h3 {
         width: 115px;
         padding-left: 14px;
     }
+
     .pay_dely h2 {
         margin-top: 1rem;
     }
-    
+
 }
 
 /* 按鈕 */
@@ -339,19 +343,24 @@ h4 {
     border-radius: 10px;
     padding: 6px 36px;
 }
+
 @media (max-width: 576px) {
+
     #back,
-#send_order{
-    font-size: 16px;
-    padding: 6px 24px;
+    #send_order {
+        font-size: 16px;
+        padding: 6px 24px;
+    }
+
+    .step_button {
+        margin: 40px auto 0 auto;
+    }
+
+    .total h2 {
+        margin-bottom: 4px;
+    }
 }
-.step_button {
-    margin: 40px auto 0 auto;
-}
-.total h2 {
-    margin-bottom: 4px;
-}
-}
+
 /* 遮罩、彈出視窗 */
 .mask {
     display: none;
@@ -429,4 +438,21 @@ h4 {
 
 #order_track {
     background: #613134;
+}
+
+@media (max-width:576px) {
+    .completed {
+        top: calc(50vh - 400px/2);
+        left: calc(50% - 350px/2);
+        width: 350px;
+        height: 400px;
+    }
+
+    #to_index,
+    #order_track {
+        padding: 6px 24px;
+    }
+    .completed>* {
+        width: 305px;
+    }
 }
