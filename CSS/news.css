@@ -91,6 +91,8 @@ main {
   /* 水平置中 */
   /* height: 100vh; 設置高度為視窗高度 */
   margin: 44px 0;
+
+  opacity: 0; /*一開始先隱藏*/
 }
 
 
@@ -116,7 +118,27 @@ main {
   /*加上要給下方的距離，所以高度重設*/
   border-bottom: #9D9D9D 1px solid;
   padding: 44px 0px 44px 0;
+  /* margin: 44px 0 70px 0; */
 }
+
+/* 淡入動畫 */
+.fade-in{
+  animation: fadeIn 1s ease-in both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(-10%, -10%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+
 
 
 /*消息裡的圖片區*/
