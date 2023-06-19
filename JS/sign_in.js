@@ -1,14 +1,3 @@
-// var acc = new Map();
-// var password = [];
-// var email = new Map();
-
-// acc.set("test", 0);
-// password[0] = "000000";
-// email.set("test@test", 0);
-
-// var sign_num = "";
-
-
 $(function () {
     // constants
     var SHOW_CLASS = 'show',
@@ -36,14 +25,14 @@ $(function () {
     });
 
     // 登入/註冊資料區
-    var acc =  new Map();
+    var acc = new Map();
     var password = [];
     var email = new Map();
-    var sign_num="";
+    var sign_num = "";
 
-    acc.set("test",0);
-    password[0]="000000";
-    email.set("test@test",0);
+    acc.set("test", 0);
+    password[0] = "000000";
+    email.set("test@test", 0);
 
     //註冊區
     //帳號、密碼、再次輸入密碼、email
@@ -55,39 +44,65 @@ $(function () {
         const pwAgText = formElement[2].value;
         const emailText = formElement[3].value;
         var ero = false;
+        var ero_up = "";
 
         if (acc.has(accText)) {
             // 檢查帳號有沒有重複
             // 判斷為true就會被執行，且原本has回傳的值就是布林值，所以不用特別寫=true
-            alert("此帳號已有人使用");
+            // alert("此帳號已有人使用");
+            ero_up="此帳號已有人使用\n";
             ero = true;
         }
 
         if (pwText.length < 6) {
-            alert("密碼長度需六位以上");
+            // alert("密碼長度需六位以上");
+            ero_up+="密碼長度需六位以上\n";
+
+            formElement[1].value = "";
+            formElement[2].value = "";
             ero = true;
         }
         if (pwText.length >= 6 && pwAgText != pwText) {
             // 判斷不同後清空密碼欄位
-            alert("兩次輸入密碼不同，請重新輸入");
-            formElement[1].value = "";
+            // alert("兩次輸入密碼不同，請重新輸入");
+            ero_up+="兩次輸入密碼不同\n";
+
             formElement[2].value = "";
             ero = true;
         }
         if (email.has(emailText)) {
             // 檢查信箱有沒有重複
-            alert("此信箱已有人使用");
+            // alert("此信箱已有人使用");
+            ero_up+="此信箱已有人使用";
+
             ero = true;
         }
+
         if (!ero) {
             //都沒有錯，才把資料存到陣列，並清空畫面
             acc.set(accText, (acc.size));
             password.push(pwText);
             email.set(emailText, (email.size));
-            alert('註冊成功');
+            // alert('註冊成功');
             for (var i = 0; i <= 3; i++) {
                 formElement[i].value = "";
             }
+            Swal.fire({
+                imageUrl: 'images/order_confirm/icon-check-circle.svg',
+                confirmButtonText: "註冊成功",
+                customClass: {
+                    title: 'my-title-class-up',
+                }
+            });
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: ero_up,
+                text: '請重新輸入',
+                customClass: {
+                    title: 'my-title-class-up',
+                }
+            });
         }
 
         return false; //參考 https://www.twblogs.net/a/5b7e9f592b717767c6aae1e9 送出時讓表單不要跳轉
@@ -100,22 +115,38 @@ $(function () {
         const formElement = document.getElementById("form_in");
         const accText = formElement[0].value;
         const pwText = formElement[1].value;
-        
+        var ero_in = "";
+
         //如果num有取得值，表示陣列有這個帳號，如果num是null代表沒有
         //密碼陣列同一個位置，如果密碼也一樣就可以登入
         sign_num = acc.get(accText);  //num型態是number
         if (sign_num != null && pwText == password[sign_num]) {
-            alert("登入成功");
+            // alert("登入成功");
+            window.location.href = './ordersearch.html';
         } else if (sign_num == null) {
-            alert("此帳號不存在");
+            // alert("此帳號不存在");
+            ero_in = "此帳號不存在"
         } else if (pwText != password[sign_num]) {
-            alert("密碼錯誤");
+            // alert("密碼錯誤");
+            ero_in = "密碼錯誤"
         };
+
+            Swal.fire({
+                // 彈出錯誤訊息
+                // 使用 https://sweetalert2.github.io/#icons 
+                icon: 'error',
+                title: ero_in,
+                text: '請重新輸入',
+                customClass: {
+                    title: 'my-title-class',
+                }
+            });
+
 
         return false;
     });
 
-    
+
 });
 
 

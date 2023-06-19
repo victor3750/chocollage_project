@@ -257,12 +257,14 @@ h3 span {
 }
 
 @media (max-width:576px) {
+
     /* step 文字大小 */
-    #accordion h3{
-        font-size:16px;
+    #accordion h3 {
+        font-size: 16px;
     }
+
     .hit {
-        font-size:14px;
+        font-size: 14px;
         margin-left: -120px;
     }
 }
@@ -277,7 +279,8 @@ h3 span {
     /*item們水平排*/
     flex-wrap: wrap;
     /*寬度不夠就換行*/
-    /* margin-top: 40px; */
+    margin-bottom: 75px;
+    /* 推開跟Step3的距離，空出位置給提示字*/
     justify-content: flex-start;
     /* justify-content: space-between; */
 
@@ -495,4 +498,31 @@ h3 span {
 
     text-align: center;
     line-height: 45px;
+}
+
+/* 錯誤訊息 */
+.my-title-class-up {
+    font-size: 24px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    margin-bottom: 15px;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+    /* 改小字 */
+    color: #C39681 !important;
+    letter-spacing: 0.2em;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    /* 改按鈕樣式 */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 10px !important;
+    padding: 6px 36px;
+    background: #613134 !important;
 }

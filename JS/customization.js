@@ -1,8 +1,8 @@
 $(function () {
     var size = 0; //step1
     var box = 'h3:first-child span' //step1
-    var chocoTot = 0; //step1
-    var chocoBox = "";
+    var chocoTot = 0; //step2
+    var chocoBox = "";//step3
     var eroText = ""; //下一步
 
     // 全體收合
@@ -14,7 +14,12 @@ $(function () {
     //STEP1
     $('input[type=radio]').change(function () {
         size = $(this).val(); //取得被選中的radio的值
-        // alert(size); >>OK有吃到
+
+        // 只要重新選擇step1，巧克力就要歸0，數量超過的提示字也要隱藏
+        chocoTot = 0;
+        $('.qty').val(0);
+        $('.over').remove();
+
         // 參考 https://www.fooish.com/jquery/dom-manipulation.html
 
         //先用remove刪除前一個長出來的，再用prepend長一個新的出來
@@ -54,13 +59,14 @@ $(function () {
     $(".increment").click(function () {
         if (size == 0) {
             alert("請先選擇顆數");
+            return false;
         }
         // 數量增加時(且總數未超過)，只有同一層的.qty會增加
         var n = $(this).siblings(".qty").val();
 
         //提示已達上限
         $('.over').remove();
-        if (chocoTot >= size) {
+        if (chocoTot >= size ) {
             $(this).prepend(`<p class="over">可選數量已達到上限</p>`);
             return false;
         }
@@ -69,7 +75,6 @@ $(function () {
         $(this).siblings(".qty").val(n);
         // 數量增加時，總數也增加
         chocoTot++;
-        console.log(chocoTot);
 
     })
 
@@ -93,7 +98,6 @@ $(function () {
         $(this).siblings(".qty").val(n);
         // 數量減少時，總數也減少
         chocoTot--;
-        console.log(chocoTot);
     });
 
     // STEP3
@@ -110,7 +114,7 @@ $(function () {
 
         chocoBox = document.getElementsByClassName("boxClick")[0].alt;//取得img的alt
         // console.log(chocoBox);
-        
+
     });
 
     $("#next").click(function () {
@@ -127,23 +131,31 @@ $(function () {
 
 
         if (size == 0) {
-            eroText += "未選擇巧克力";
+            eroText += "請選擇顆數及口味\n";
         }
 
         if (size != 0 && chocoTot < size) {
-            eroText += "未選足巧克力數量"
+            eroText += "請至選擇口味補足巧克力數量\n"
         }
-        if(chocoBox=="" && eroText ==""){
-            eroText+="未選擇包裝"
-        }else if(chocoBox==""){
-            eroText+="、未選擇包裝"
-        }
-        // if (chocoBox == "") {
+        // if (chocoBox == "" && eroText == "") {
         //     eroText += "未選擇包裝"
+        // } else if (chocoBox == "") {
+        //     eroText += "、未選擇包裝"
         // }
+        if (chocoBox == "") {
+            eroText += "請選擇包裝"
+        }
 
         if (eroText != "") {
-            alert(eroText);
+            // alert(eroText);
+            Swal.fire({
+                icon: 'error',
+                title: eroText,
+                // text: '請重新輸入',
+                customClass: {
+                    title: 'my-title-class-up',
+                }
+            });
         }
 
     });

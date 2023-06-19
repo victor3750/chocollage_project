@@ -134,6 +134,39 @@ label {
   margin: 10px 0 5px;
 }
 
+/* 錯誤訊息彈出視窗 */
+.my-title-class,
+.my-title-class-up {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.2em;
+  color: #613134;
+  margin-bottom: 15px;
+}
+.my-title-class-up{
+  /* 註冊區微調 */
+  line-height: 50px;
+}
+
+
+div:where(.swal2-container) .swal2-html-container{
+  /* 改小字 */
+  color: #C39681 !important;
+  letter-spacing: 0.2em;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  /* 改按鈕樣式 */
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 10px !important;
+    padding: 6px 36px;
+    background: #613134 !important;
+}
+
 
 /* 輸入框 */
 
@@ -205,6 +238,9 @@ form input[type=submit] {
 
 
 
+
+
+
 /* 預設值樣式 */
 ::placeholder {
   font-weight: 400;
@@ -232,3 +268,4 @@ footer {
     padding-left: 40px;
   }
 }
+
