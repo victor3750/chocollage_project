@@ -256,6 +256,17 @@ h3 span {
     }
 }
 
+@media (max-width:576px) {
+    /* step 文字大小 */
+    #accordion h3{
+        font-size:16px;
+    }
+    .hit {
+        font-size:14px;
+        margin-left: -120px;
+    }
+}
+
 
 /*客製選擇區-Step2*/
 

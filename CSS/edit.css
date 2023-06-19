@@ -169,6 +169,34 @@ select {
     }
 }
 
+@media (max-width:576px) {
+
+    #edit form {
+        margin-left: 20px;
+    }
+
+    form input[type=text],
+    form input[type=password],
+    form input[type=email] {
+        width: 350px;
+    }
+
+    #county_box,
+    #district_box,
+    #zipcode_box {
+        /* width: 180px; */
+        margin: 5px 20px 20px 0;
+    }
+
+    #zipcode_box{
+        width: 150px;
+    }
+
+    #address {
+        width: 350px;
+    }
+}
+
 
 
 /* 按鈕 */

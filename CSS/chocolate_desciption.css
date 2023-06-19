@@ -163,9 +163,30 @@ main {
 }
 
 @media (max-width:576px) {
+  /* banner文字 */
 
   .banner_text {
     right: 10px;
+    min-width: 248px;
+    top: 95px;
+  }
+
+  .banner_text h2 {
+    font-size: 20px;
+  }
+
+  .banner_text p {
+    line-height: 40px;
+  }
+
+  /* 按鈕 */
+  .check_list {
+    margin: 100px 30px;
+  }
+
+  .check_list>li>a {
+    font-size: 20px;
+    line-height: 35px;
   }
 
 }
@@ -242,6 +263,8 @@ figure img {
   letter-spacing: 0.2em;
 }
 
+
+
 /* 右側 */
 .list_right {
 
@@ -302,7 +325,7 @@ figure img {
 
   
   .list_box>article {
-    min-width: 470px; /*這行跟list_right的min-width可以調寬*/
+    min-width: 355px; /*這行跟list_right的min-width可以調寬*/
     height: 355px;
     /* min-width: 450px; */
   }
@@ -310,27 +333,44 @@ figure img {
 
   /* 左邊 */
   .item_left {
-    display: flex;
-
-  }
+    /* display: flex; */
+    position: relative;
+  } 
 
   figure {
     height: 180px;
-    width: 180px;
+    width: 170px;
   }
 
   .price {
     width: 80px;
+    height: 60px;
+    line-height: 60px;
+
+    position: absolute;
+    bottom:-7px;
+    right: 0;
   }
 
+  .p-silver{
+    color: #ffffff;
+  }
 
   /* 右邊 */
   .list_right {
-    height: 280px;
-    min-width: 300px;
+    height: 370px;
+    min-width: 270px;
     border-radius: 10px;
-    padding: 20px 50px 40px 70px; /*商品內容的推字*/
+    /*padding: 20px 50px 40px 70px; 商品內容的推字*/
+    padding: 60px 30px 40px 25px;
+    top:65px;
+    left: 35px;
   }
 
+  .list_right h2{
+    padding-left: 120px;
+    margin-bottom: 55px;
+    margin-top: -30px;
+  }
 
 }

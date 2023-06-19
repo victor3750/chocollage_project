@@ -62,7 +62,8 @@ $(document).ready(function () {
                     item.style.marginBottom="-10px";
                 }else{
                     item.style.visibility = 'visible';
-                    item.style.height = "unset";
+                    // item.style.height = "unset";
+                    item.style.height = "355px";
                     item.style.marginTop="unset";
                     item.style.marginBottom="40px";
                 }

@@ -210,6 +210,10 @@ main {
 
 
 @media (max-width:576px) {
+    .banner_text {
+        width: 40%;
+        padding-top: 120px;
+    }
 
     /* 左文字banner */
     .banner_text_cn {
@@ -220,4 +224,26 @@ main {
         margin-left: 20%;
     }
 
+    .shop_ivfo {
+        top: 300px;
+        width: 357px;
+    }
+
+    /* 圖 */
+
+    .ig{
+        width: 85%;
+        height: 605px;
+    }
+
+    .about_right {
+        flex:unset;
+        width: 375px;
+        height: unset;
+    }
+
+    .fb{
+        width: 100%;
+        height: 145px;
+    }
 }
