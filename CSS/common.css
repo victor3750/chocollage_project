@@ -274,7 +274,8 @@ header {
     opacity: 1;
 }
 
-.member_op:hover a {
+.member_op:hover a,
+#menu li:hover a {
     color: #C39681;
 }
 
