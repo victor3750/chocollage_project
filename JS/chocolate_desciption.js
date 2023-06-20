@@ -49,11 +49,6 @@ $(document).ready(function () {
 
             for (let i = 0; i < allItems.length; i++) {
                 const item = allItems[i];
-                if(targetClass!="allItem"){
-                    console.log("指定商品");
-                }else if(targetClass=="allItem"){
-                    console.log("全部商品");
-                }
 
                 if (!item.classList.contains(targetClass) && targetClass!="allItem") {
                     item.style.visibility = 'hidden';
