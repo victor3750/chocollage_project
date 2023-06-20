@@ -28,3 +28,13 @@ matureLink.forEach(link => {
 relaxLink.forEach(link => {
     link.addEventListener('click', handleClick);
 });
+
+螢幕寬度大於等於821px時才執行動畫
+window.addEventListener('scroll', function () {
+    var bs_img = document.querySelector('.bs_img');
+    var bs_img_top = bs_img.getBoundingClientRect().top;
+    var window_height = window.innerHeight;
+    if (bs_img_top < window_height && window.matchMedia('(min-width: 821px)').matches) {
+        bs_img.classList.add('animate');
+    }
+});
