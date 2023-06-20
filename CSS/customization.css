@@ -130,22 +130,6 @@ body {
     /*貼頭尾*/
 }
 
-/* 按鈕測試
-
-已知被選擇的面板，h3(跟自動生成的span)為
-<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active" 
-role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0">
-<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>選擇顆數</h3>
-
-沒有被選擇的面板
-<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" 
-role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1">
-<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>選擇口味</h3>
-
-感覺可以控制
-h3下的span位置 & ui-accordion-header-active(啟用)下的span 跟 ui-accordion-header-collapsed 沒啟用的span
-
-*/
 
 /* 展開收合按鈕 */
 h3 span {
@@ -447,7 +431,6 @@ h3 span {
     color: #FFFFFF;
 }
 
-
 /* 禮盒被選時 */
 .boxClick {
     border: #613134 4px dashed;
@@ -472,6 +455,7 @@ h3 span {
         width: 250px;
     }
 }
+
 
 
 
