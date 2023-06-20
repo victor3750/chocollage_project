@@ -24,7 +24,8 @@ window.addEventListener('scroll', () => {
                 article.classList.add('fade-in');
             }
         }else{
-            if ((scrollPosition + 330) > triggerPosition && !article.classList.contains('fade-in')) {
+            // if ((scrollPosition + 330) > triggerPosition && !article.classList.contains('fade-in')) {
+            if ((scrollPosition + 430) > triggerPosition && !article.classList.contains('fade-in')) {
                 // 添加 'fade-in' 類別
                 article.classList.add('fade-in');
             }
