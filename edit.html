@@ -65,7 +65,7 @@
             <!-- <h2>編輯會員資料</h2> -->
 
             <!-- 會員登入畫面 -->
-            <form autocomplete="off">
+            <form autocomplete="off" id="form_edit">
 
                 <label for="name">收件人姓名</label>
                 <input type="text" id="name" name="name" placeholder="請輸入姓名">
@@ -73,8 +73,8 @@
                 <label for="phone">聯絡電話</label>
                 <input type="text" id="phone" name="phone" placeholder="02-1234-1234">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="yourid@email.com"><br>
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="yourid@email.com" value="a1234bc@gmail.com"><br>
 
                 <label for="shipping_address">收件地址</label>
                 <div class="address_section">
@@ -131,7 +131,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="JS/hamburger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- 彈出視窗的cdn-->
     <script src="JS/checkout.js"></script>
+    <script src="JS/edit.js"></script>
 
 </body>
 

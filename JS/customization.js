@@ -58,7 +58,14 @@ $(function () {
 
     $(".increment").click(function () {
         if (size == 0) {
-            alert("請先選擇顆數");
+            Swal.fire({
+                icon: 'warning',
+                title: "請先選擇顆數",
+                // text: '請重新輸入',
+                customClass: {
+                    title: 'my-title-class-up',
+                }
+            });
             return false;
         }
         // 數量增加時(且總數未超過)，只有同一層的.qty會增加
@@ -80,7 +87,14 @@ $(function () {
 
     $(".decrement").click(function () {
         if (size == 0) {
-            alert("請先選擇顆數");
+            Swal.fire({
+                icon: 'warning',
+                title: "請先選擇顆數",
+                // text: '請重新輸入',
+                customClass: {
+                    title: 'my-title-class-up',
+                }
+            });
         }
 
         // 數量減少時(且數量大於0)，只有同一層的.qty會減少
@@ -103,11 +117,6 @@ $(function () {
     // STEP3
     $(".spanBG").click(function () {
         // 參考https://ithelp.ithome.com.tw/articles/10216523
-        //$(this).parent(".box_item").addClass('boxClick'); 在選中的父層添加class
-        //$(this).parent().siblings(".box_item").removeClass('boxClick');  把其他的class清掉
-
-        //$(this).siblings("figure").addClass('boxClick'); 在選中的同層figure添加class
-        //$(this).parent().siblings().find("figure").removeClass('boxClick');  把其他的class清掉
 
         $(this).siblings("figure").find("img").addClass('boxClick');  //在選中項目的img添加class
         $(this).parent().siblings().find("figure").find("img").removeClass('boxClick');//把其他項目的img class移除
@@ -137,11 +146,7 @@ $(function () {
         if (size != 0 && chocoTot < size) {
             eroText += "請至選擇口味補足巧克力數量\n"
         }
-        // if (chocoBox == "" && eroText == "") {
-        //     eroText += "未選擇包裝"
-        // } else if (chocoBox == "") {
-        //     eroText += "、未選擇包裝"
-        // }
+
         if (chocoBox == "") {
             eroText += "請選擇包裝"
         }

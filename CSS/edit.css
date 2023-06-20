@@ -41,31 +41,6 @@ main {
     justify-content: center;
 }
 
-/*#edit h2 {
-    width: 210px;
-    display: block;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    color: #613134;
-    margin: 100px 0 38px;
-}
-
-#edit h2::after {
-    content: "";
-    必寫，content 就算沒內容也一定要寫
-    display: block;
-    width: 210px;
-    height: 1px;
-    background-color: #613134;
-    position: absolute;
-    margin-top: 16px;
-}*/
-
-
 .pg_title {
     width: 100%;
 }
@@ -126,7 +101,7 @@ main {
 }
 
 
-/* 註冊/登入 共用區 */
+/* form區 */
 
 label {
     font-weight: 500;
@@ -275,10 +250,6 @@ form input[type=submit] {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     border-color: transparent;
 
-    /*定位在form最右下
-    position: absolute;
-    right: 0;
-    bottom: 0;*/
 
 }
 
@@ -291,6 +262,41 @@ form input[type=submit] {
 
 }
 
+
+
+/* 錯誤訊息彈出視窗 */
+.my-title-class,
+.my-title-class-up {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    margin-bottom: 15px;
+}
+
+.my-title-class-up {
+    /* 註冊區微調 */
+    line-height: 50px;
+}
+
+
+div:where(.swal2-container) .swal2-html-container {
+    /* 改小字 */
+    color: #C39681 !important;
+    letter-spacing: 0.2em;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    /* 改按鈕樣式 */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 10px !important;
+    padding: 6px 36px;
+    background: #613134 !important;
+}
 
 
 /* 預設值樣式 */
