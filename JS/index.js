@@ -29,7 +29,7 @@ relaxLink.forEach(link => {
     link.addEventListener('click', handleClick);
 });
 
-螢幕寬度大於等於821px時才執行動畫
+// 螢幕寬度大於等於821px時才執行動畫
 window.addEventListener('scroll', function () {
     var bs_img = document.querySelector('.bs_img');
     var bs_img_top = bs_img.getBoundingClientRect().top;
