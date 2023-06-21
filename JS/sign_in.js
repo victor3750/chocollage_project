@@ -53,6 +53,10 @@ $(function () {
             ero_up="此帳號已有人使用\n";
             ero = true;
         }
+        
+        if(accText==""){
+            ero_up="請填寫帳號\n";
+        }
 
         if (pwText.length < 6) {
             // alert("密碼長度需六位以上");
@@ -76,6 +80,9 @@ $(function () {
             ero_up+="此信箱已有人使用";
 
             ero = true;
+        }
+        if(emailText==""){
+            ero_up+="請填寫信箱\n";
         }
 
         if (!ero) {
@@ -125,7 +132,7 @@ $(function () {
             window.location.href = './ordersearch.html';
         } else if (sign_num == null) {
             // alert("此帳號不存在");
-            ero_in = "此帳號不存在"
+            ero_in = "帳號不存在"
         } else if (pwText != password[sign_num]) {
             // alert("密碼錯誤");
             ero_in = "密碼錯誤"

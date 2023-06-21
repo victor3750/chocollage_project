@@ -107,7 +107,7 @@ body {
     /* width: 1050px; */
     width: 100%;
 
-    height: 50px;
+    height: 45px;
     background: #E6DEDD;
     border-radius: 10px;
 
@@ -117,7 +117,7 @@ body {
     line-height: 32px;
     letter-spacing: 0.2em;
     color: #613134;
-    line-height: 50px;
+    line-height: 45px;
 
     margin-top: 52px;
     padding-left: 12px;
@@ -134,7 +134,7 @@ body {
 /* 展開收合按鈕 */
 h3 span {
     width: 50px;
-    height: 50px;
+    height: 45px;
     /* 預設要是檢的 */
     background-image: url(../images/customization/Collapse.png);
     background-repeat: no-repeat;

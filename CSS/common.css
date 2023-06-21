@@ -265,7 +265,7 @@ header {
     display: flex;
     justify-content: start;
     /* 文字靠左 */
-    margin-left: 5px;
+    margin-left: 10px;
     line-height: 50px;
 }
 
