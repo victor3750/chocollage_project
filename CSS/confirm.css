@@ -41,9 +41,11 @@ th {
     letter-spacing: 0.2em;
     color: #FFFFFF;
 }
+
 tr td:first-child {
     padding-left: 2rem;
 }
+
 td {
     font-size: 16px;
     line-height: 38px;
@@ -63,10 +65,12 @@ td {
     width: 100%;
     object-fit: cover;
 }
+
 /* 購物車icon數量顯示 */
 #cart {
     position: relative;
 }
+
 #cart::after {
     content: "(1)";
     font-size: 16px;
@@ -77,6 +81,7 @@ td {
     color: #000;
     /* display: none; */
 }
+
 /* 確認清單 */
 #content {
     position: relative;
@@ -169,6 +174,10 @@ textarea:focus {
     padding-bottom: 60px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+.step_button img {
+    opacity: 0;
 }
 
 #back,
@@ -184,17 +193,56 @@ textarea:focus {
     padding: 6px 36px;
 }
 
+.b-flying-img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    animation: fly 0.8s 1;
+}
+
+@keyframes fly {
+    0% {
+        -moz-transform: rotate(0deg);
+        /* Для Firefox */
+        -ms-transform: rotate(0deg);
+        /* Для IE */
+        -o-transform: rotate(0deg);
+        /* Для Opera */
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        /* Для Firefox */
+        -ms-transform: rotate(360deg);
+        /* Для IE */
+        -o-transform: rotate(360deg);
+        /* Для Opera */
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
 @media (max-width: 576px) {
 
     tr th:first-child {
         padding-left: 1rem;
     }
+
     tr td:first-child {
         padding-left: 1rem;
     }
+
     h2 {
         padding: 0 1rem;
     }
+
     #back,
     #toCart {
         font-size: 16px;
@@ -203,5 +251,9 @@ textarea:focus {
 
     td {
         font-size: 14px;
+    }
+
+    #toCart::after {
+        right: 3.6rem;
     }
 }
