@@ -1,4 +1,5 @@
 // Cities of Taiwan
+
 // 縣市、鄉鎮市區下拉選單
 const database = {
     '基隆市': { '仁愛區': '200', '信義區': '201', '中正區': '202', '中山區': '203', '安樂區': '204', '暖暖區': '205', '七堵區': '206' },
@@ -132,7 +133,7 @@ district_box.addEventListener('change', () => {
     zipcode_box.value = `${zipcode_value}`;
 })
 // 信用卡號
-// 選擇線上支付時彈出
+// 選擇線上支付時彈出輸入區
 function showCreditCardInput() {
     let credit_card_input = document.getElementById("credit_card_input");
     let online_pay = document.getElementById("online_pay");
@@ -177,6 +178,17 @@ $("input.card").on("keyup", function (e) {
     }
 
 });
+
+// 選擇宅配到府時彈出地址區
+function showAddressInput() {
+    let address_input = document.getElementById("address_fra");
+    let home_dely = document.getElementById("home_dely");
+    if (home_dely.checked && home_dely.value === "home_dely") {
+        address_input.style.display = "flex";
+    } else {
+        address_input.style.display = "none";
+    }
+}
 
 // 條碼載具
 function showInput() {

@@ -95,11 +95,11 @@
                 </div>
                 <h2>選擇取貨方式</h2>
                 <div class="radio">
-                    <input type="radio" name="pickup_method" id="self_pick">
+                    <input type="radio" name="pickup_method" id="self_pick" value="self_pick" onchange="showAddressInput()">
                     <label for="self_pick">店鋪自取</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="pickup_method" id="home_dely">
+                    <input type="radio" name="pickup_method" id="home_dely" value="home_dely" onchange="showAddressInput()">
                     <label for="home_dely">宅配到府<small>(運費80元)</small></label>
                 </div>
                 <h2>填寫收件人資訊</h2>
@@ -116,7 +116,7 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email">
                     </div>
-                    <div>
+                    <div id="address_fra">
                         <label for="shipping_address">收件地址</label>
                         <div class="address_section">
                             <div>

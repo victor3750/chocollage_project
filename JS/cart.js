@@ -32,6 +32,7 @@ function updateTotalPrice() {
     var totalElement = document.querySelector(".total span");
     totalElement.textContent = "$" + totalPrice;
 }
+
 // 監聽 .price 元素的變動
 var priceElements = document.querySelectorAll(".price");
 for (var i = 0; i < priceElements.length; i++) {
@@ -150,35 +151,6 @@ $(function () {
         $(".contents-row_" + listNumber).slideToggle('slow');
     });
 });
-
-
-// 刪除品項（直接刪除無淡出效果）
-// $(function () {
-//     $('[class^="list_"] .trash').click(function (e) {
-//         e.preventDefault();
-//         var parentRow = $(this).closest('tr');
-//         var className = parentRow.attr('class').match(/list_\d+/)[0];
-
-//         // 顯示確認刪除的 div
-//         $('.mask').fadeIn();
-
-//         // 點擊確定刪除
-//         $('#con_del').click(function (e) {
-//             e.preventDefault();
-//             $('.' + className).remove();
-//             updateTotalPrice(); // 更新價格
-//             // 隱藏確認刪除的 div
-//             $('.mask').fadeOut();
-//         });
-
-//         // 點擊取消
-//         $('#cancel').click(function (e) {
-//             e.preventDefault();
-//             // 隱藏確認刪除的 div
-//             $('.mask').fadeOut();
-//         });
-//     });
-// });
 
 // 購物車為空提示與刪除品項功能
 $(function () {

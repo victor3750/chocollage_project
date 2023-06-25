@@ -27,7 +27,7 @@ addToCart.on('click', function (e) {
     var cartLeftOffset = -(offsetLeft - el.offset().left) + 150;
     var flyingImg = $('<img class="b-flying-img">');
     flyingImg.attr('src', img.attr('src'));
-    flyingImg.css('width', '200').css('height', '200');
+    flyingImg.css('width', window.matchMedia('(max-width: 576px)').matches ? '100' : '200').css('height', window.matchMedia('(max-width: 576px)').matches ? '100' : '200');
 
 
 

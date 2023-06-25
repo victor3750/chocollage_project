@@ -43,7 +43,7 @@
     width: 65%;
     min-width: 600px;
     max-width: 1050px;
-    min-height: 900px;
+    min-height: 800px;
     margin: 0 auto;
 }
 
@@ -201,7 +201,10 @@ form label,
     width: 75px;
     margin-right: 0;
 }
-
+/* 地址區 */
+#address_fra {
+    display: none;
+}
 /* 載具條碼 */
 #carrier_number {
     display: none;
