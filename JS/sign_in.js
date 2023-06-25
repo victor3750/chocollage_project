@@ -32,7 +32,7 @@ $(function () {
 
     acc.set("test", 0);
     password[0] = "000000";
-    email.set("test@test", 0);
+    email.set("a1234bc@gmail.com", 0);
 
     //註冊區
     //帳號、密碼、再次輸入密碼、email
