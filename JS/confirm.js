@@ -1,5 +1,6 @@
 var cart = $('#cart'),
-    addToCart = $('#toCart');
+    addToCart = $('#toCart'),
+    hamburger = $('.hamburger');
 
 addToCart.on('click', function (e) {
     e.preventDefault();
@@ -8,25 +9,43 @@ addToCart.on('click', function (e) {
     var el = $(this),
         item = el.parent(),
         img = item.find('.flyCart'),
-        cartTopOffset = cart.offset().top - item.offset().top,
-        cartLeftOffset = cart.offset().left - item.offset().left;
-        console.log(img);
+        offsetTop,
+        offsetLeft;
+
+    if (window.matchMedia('(max-width: 576px)').matches) {
+        offsetTop = hamburger.offset().top;
+        offsetLeft = hamburger.offset().left + 40;
+    } else if (window.matchMedia('(max-width: 820px)').matches) {
+        offsetTop = hamburger.offset().top;
+        offsetLeft = hamburger.offset().left;
+    } else {
+        offsetTop = cart.offset().top;
+        offsetLeft = cart.offset().left;
+    }
+
+    var cartTopOffset = offsetTop - el.offset().top;
+    var cartLeftOffset = -(offsetLeft - el.offset().left) + 150;
     var flyingImg = $('<img class="b-flying-img">');
     flyingImg.attr('src', img.attr('src'));
     flyingImg.css('width', '200').css('height', '200');
-    console.log(img);
+
 
 
     flyingImg.animate({
         top: cartTopOffset,
-        left: cartLeftOffset,
+        right: cartLeftOffset,
         width: 50,
         height: 50,
         opacity: 0.1
     }, 800, function () {
         flyingImg.remove();
+        $('#cart_num').css('display', 'block');
 
+        var cartNum = $('#cart_num span');
+        var currentNum = parseInt(cartNum.text());
+        var newNum = currentNum + 1;
+        cartNum.text(newNum);
     });
 
-    el.parent().append(flyingImg);
+    el.append(flyingImg);
 });
