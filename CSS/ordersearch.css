@@ -120,6 +120,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 540px;
 }
 
 .order {
@@ -216,6 +217,8 @@ hr {
     margin-left: 50px;
 }
 
+
+
 /*縮放測試 part2 OK*/
 
 .order th {
@@ -288,6 +291,14 @@ hr {
 }
 
 .date_rwd {
+    display: none;
+}
+
+/* 一開始先隱藏展開內容 */
+.contents-row_2 {
+    display: none;
+}
+.contents-row_3 {
     display: none;
 }
 

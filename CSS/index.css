@@ -203,9 +203,9 @@
     animation: rotate 7s infinite linear;
 }
 
-.shopping:hover .circle {
+/* .shopping:hover .circle {
     animation-play-state: paused;
-}
+} */
 
 @keyframes rotate {
     0% {
