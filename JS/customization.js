@@ -57,6 +57,7 @@ $(function () {
     /* 數量增減 */
 
     $(".increment").click(function () {
+        // 增加紐
         if (size == 0) {
             Swal.fire({
                 icon: 'warning',
@@ -73,7 +74,7 @@ $(function () {
 
         //提示已達上限
         $('.over').remove();
-        if (chocoTot >= size ) {
+        if (chocoTot >= size) {
             $(this).prepend(`<p class="over">可選數量已達到上限</p>`);
             return false;
         }
@@ -86,6 +87,7 @@ $(function () {
     })
 
     $(".decrement").click(function () {
+        // 減少紐
         if (size == 0) {
             Swal.fire({
                 icon: 'warning',
@@ -113,6 +115,25 @@ $(function () {
         // 數量減少時，總數也減少
         chocoTot--;
     });
+
+    $(".qty").on('change', function (e) {
+        // 直接改值
+        var txtQty=0;
+        $('.over').remove();
+        $(".qty").map(function(){
+            // 將目前所有的值相加
+            txtQty += parseInt($(this).val());
+        })
+        // 如果總數大於size，跳出提醒，且將該欄位歸0
+        if(txtQty>size){
+            // console.log("數量超過");
+            txtQty-=$(this).val();
+            $(this).siblings().prepend(`<p class="over">超過上限，重新選擇</p>`);
+            $(this).val(0);
+        }
+        chocoTot=txtQty;
+    });
+
 
     // STEP3
     $(".spanBG").click(function () {
