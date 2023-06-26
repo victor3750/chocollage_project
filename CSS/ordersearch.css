@@ -417,7 +417,18 @@ hr {
     /* #ordercontent .dragform .title_item li:first-child {
         width: 30%;
     } */
+    #ordercontent .dragform .title_item li:nth-child(2) {
+        width: unset;
+    }
     .item_list {
         margin-left: 40px;
+    }
+
+    .order table tbody td:first-child {
+        padding-left: unset;
+    }
+
+    .dragform {
+        width: 100%;
     }
 }
